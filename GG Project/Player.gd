@@ -3,8 +3,8 @@ class_name Player
 
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $Sprite2D
-@onready var ray_cast_2d = $RayCast2D
-@onready var ray_cast_2d2 = $RayCast2D2
+@onready var ray_cast_2d = $MoveCast
+@onready var ray_cast_2d2 = $ObjCast
 var is_moving = false
 var is_floating = false
 var has_water = false
@@ -56,7 +56,10 @@ func move(direction: Vector2):
 				float()
 			if collider.is_in_group("iceitem"):
 				ice()
-	
+			#if collider.is_in_group("hole") && is_floating == false:
+				#return
+				
+				
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
