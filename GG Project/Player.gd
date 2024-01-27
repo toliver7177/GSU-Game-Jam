@@ -1,11 +1,14 @@
 extends Sprite2D
+class_name Player
 
 @onready var tile_map = $"../TileMap"
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $RayCast2D
+@onready var ray_cast_2d2 = $RayCast2D2
 var is_moving = false
-
-
+var is_floating = false
+var has_water = false
+var collision
 
 func _process(delta):
 	if is_moving:
@@ -19,7 +22,8 @@ func _process(delta):
 		move(Vector2.LEFT)
 	elif Input.is_action_pressed("right"):
 		move(Vector2.RIGHT)
-
+	
+	
 
 func move(direction: Vector2):
 	
@@ -41,6 +45,18 @@ func move(direction: Vector2):
 	if ray_cast_2d.is_colliding():
 		return
 	
+	ray_cast_2d2.target_position = direction * 16
+	ray_cast_2d2.force_raycast_update()
+	if ray_cast_2d2.is_colliding():
+		var collider = ray_cast_2d2.get_collider()
+		if collider is Node:
+			if collider.is_in_group("wateritem"):
+				wet()
+			if collider.is_in_group("floatitem"):
+				float()
+			if collider.is_in_group("iceitem"):
+				ice()
+	
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
@@ -51,4 +67,11 @@ func move(direction: Vector2):
 
 	is_moving = false
 
-
+func float():
+	is_floating = true;
+	print_debug("Is Floating")	
+func wet():
+	has_water = true;
+	print_debug("Is Wet")
+func ice():
+	print_debug("Is Cold")

@@ -222,5 +222,5 @@ texture = SubResource("AtlasTexture_b2bsf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Area2D"]
 shape = SubResource("RectangleShape2D_udx71")
 
-[node name="Wateritem" parent="." groups=["wateritem"] instance=ExtResource("3_r8okj")]
+[node name="Wateritem" parent="." groups=["Items"] instance=ExtResource("3_r8okj")]
 position = Vector2(104, 136)
