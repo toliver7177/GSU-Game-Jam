@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbj6tnrcfoo0v"]
+
+[ext_resource type="PackedScene" uid="uid://cqm8l0yp7urbu" path="res://items/floatitem/floatingballoon.tscn" id="1_7481u"]
+[ext_resource type="PackedScene" uid="uid://cfa4wrj7jw73t" path="res://player.tscn" id="2_75ynp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FBalloon" parent="." instance=ExtResource("1_7481u")]
+
+[node name="Player" parent="." instance=ExtResource("2_75ynp")]

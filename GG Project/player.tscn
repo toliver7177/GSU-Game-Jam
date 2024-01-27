@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfa4wrj7jw73t"]
+[gd_scene load_steps=4 format=3 uid="uid://cfa4wrj7jw73t"]
 
 [ext_resource type="Script" path="res://tilemovement.gd" id="1_2j3aj"]
 [ext_resource type="Texture2D" uid="uid://dkn4pnw6iojqa" path="res://icon.svg" id="2_efg8c"]
-[ext_resource type="PackedScene" uid="uid://cqm8l0yp7urbu" path="res://items/floatitem/floatingballoon.tscn" id="3_relpv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cec3t"]
 size = Vector2(143, 152)
@@ -18,5 +17,3 @@ shape = SubResource("RectangleShape2D_cec3t")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_efg8c")
-
-[node name="Node2D" parent="." instance=ExtResource("3_relpv")]
