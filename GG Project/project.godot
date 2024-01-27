@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Gamejam test"
-run/main_scene="res://main.tscn"
+config/name="UI Quickstart"
+run/main_scene="res://Main Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,10 +21,6 @@ StageVariables="*res://stage_variables.gd"
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=160
-window/size/window_width_override=640
-window/size/window_height_override=640
 window/stretch/mode="canvas_items"
 
 [input]
