@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqm8l0yp7urbu"]
+
+[ext_resource type="Script" path="res://items/floatitem/fltbaloon.gd" id="1_r1oos"]
+[ext_resource type="Texture2D" uid="uid://dkn4pnw6iojqa" path="res://icon.svg" id="2_0rfja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfcw4"]
+size = Vector2(127, 125)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="floatballoon" type="Area2D" parent="."]
+script = ExtResource("1_r1oos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floatballoon"]
+position = Vector2(272, 114.5)
+shape = SubResource("RectangleShape2D_rfcw4")
+
+[node name="Sprite2D" type="Sprite2D" parent="floatballoon"]
+position = Vector2(273, 115)
+texture = ExtResource("2_0rfja")
+
+[connection signal="area_entered" from="floatballoon" to="floatballoon" method="_on_fltballon_area_entered"]
