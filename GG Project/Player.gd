@@ -69,13 +69,14 @@ func move(direction: Vector2):
 			if collider.is_in_group("hole") && is_floating == false:
 				return
 			if collider.is_in_group("hole") && is_floating == true:
-				fly()
+				yeah()
 				print("Hole")
 				
 			if collider.is_in_group("water") && is_cold == false:
 				return
 			if collider.is_in_group("water") && is_cold == true:
-				ice()
+				yeah()
+				print("Water")
 				
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
@@ -99,4 +100,6 @@ func ice():
 func clear():
 	is_floating = true;
 	has_water = true;
-		
+
+func yeah(): #Allows the player to go over terrain
+	print_debug("Item Active")
