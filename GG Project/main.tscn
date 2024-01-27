@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://ceceqgu2bfadj"]
+[gd_scene load_steps=13 format=3 uid="uid://ceceqgu2bfadj"]
 
 [ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="1_5oit6"]
 [ext_resource type="Script" path="res://Player.gd" id="2_cxd6o"]
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_r8okj"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_f0t3v"]
+[ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_acvie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwydq"]
 texture = ExtResource("1_5oit6")
@@ -227,12 +228,18 @@ texture = SubResource("AtlasTexture_b2bsf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Creature/Area2D"]
 shape = SubResource("RectangleShape2D_udx71")
 
-[node name="Wateritem" parent="." groups=["wateritem"] instance=ExtResource("3_r8okj")]
+[node name="Wateritem" parent="." groups=["water_item"] instance=ExtResource("3_r8okj")]
 z_index = 2
 position = Vector2(104, 136)
 
 [node name="hole" parent="." groups=["hole"] instance=ExtResource("4_f0t3v")]
 z_index = 1
 position = Vector2(56, 136)
+collision_layer = 2
+collision_mask = 2
+
+[node name="balloon" parent="." groups=["float_item"] instance=ExtResource("5_acvie")]
+z_index = 2
+position = Vector2(88, 152)
 collision_layer = 2
 collision_mask = 2

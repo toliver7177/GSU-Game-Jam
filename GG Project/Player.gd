@@ -8,6 +8,7 @@ class_name Player
 var is_moving = false
 var is_floating = false
 var has_water = false
+var is_cold = false;
 var collision
 
 func _process(delta):
@@ -23,7 +24,12 @@ func _process(delta):
 	elif Input.is_action_pressed("right"):
 		move(Vector2.RIGHT)
 	
-	
+
+func _ready():
+	var is_moving = false
+	var is_floating = false
+	var has_water = false
+	var is_cold = false;
 
 func move(direction: Vector2):
 	
@@ -50,15 +56,26 @@ func move(direction: Vector2):
 	if ray_cast_2d2.is_colliding():
 		var collider = ray_cast_2d2.get_collider()
 		if collider is Node:
-			if collider.is_in_group("wateritem"):
+			#Item Check Logic
+			if collider.is_in_group("water_item"):
 				wet()
-			if collider.is_in_group("floatitem"):
-				float()
-			if collider.is_in_group("iceitem"):
-				ice()
-			#if collider.is_in_group("hole") && is_floating == false:
-				#return
+			if collider.is_in_group("float_item"):
+				fly()
 				
+			#if collider.is_in_group("iceitem"):
+			#	ice()
+				
+			#Terrain Check Logic
+			if collider.is_in_group("hole") && is_floating == false:
+				return
+			if collider.is_in_group("hole") && is_floating == true:
+				fly()
+				print("Hole")
+				
+			if collider.is_in_group("water") && is_cold == false:
+				return
+			if collider.is_in_group("water") && is_cold == true:
+				ice()
 				
 	is_moving = true
 	global_position = tile_map.map_to_local(target_tile)
@@ -70,11 +87,16 @@ func move(direction: Vector2):
 
 	is_moving = false
 
-func float():
-	is_floating = true;
-	print_debug("Is Floating")	
+func fly():
+	is_floating = true
+	print_debug("Is Float")
 func wet():
-	has_water = true;
+	has_water = true
 	print_debug("Is Wet")
 func ice():
 	print_debug("Is Cold")
+
+func clear():
+	is_floating = true;
+	has_water = true;
+		
