@@ -177,6 +177,7 @@ region = Rect2(32, 160, 16, 16)
 size = Vector2(16, 16)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("7_oixu0")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kbr4w")
@@ -248,6 +249,3 @@ collision_mask = 2
 [node name="PauseFunction" type="Node2D" parent="."]
 process_mode = 2
 script = ExtResource("6_py10j")
-
-[node name="MoveLoad" type="Node2D" parent="."]
-script = ExtResource("7_oixu0")
