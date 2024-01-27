@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dgr7ymarewewr"]
+
+[ext_resource type="Texture2D" uid="uid://b6yli2uh8xpf3" path="res://HellTiles/spritesheethell.png" id="1_dpxce"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uh4uu"]
+texture = ExtResource("1_dpxce")
+texture_region_size = Vector2i(40, 40)
+1:2/0 = 0
+2:2/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[resource]
+tile_size = Vector2i(40, 40)
+sources/1 = SubResource("TileSetAtlasSource_uh4uu")
