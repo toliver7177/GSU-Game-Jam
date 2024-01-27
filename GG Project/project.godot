@@ -10,6 +10,16 @@ config_version=5
 
 [application]
 
-config/name="GSu Game Jam"
+config/name="UI Quickstart"
+run/main_scene="res://Main Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+StageVariables="*res://stage_variables.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
