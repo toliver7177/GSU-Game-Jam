@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://due18i5a5b3p7"]
+
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="1_5ejwb"]
+[ext_resource type="Script" path="res://InGameUI.gd" id="1_shql4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fd5j"]
+bg_color = Color(0.290196, 0.431373, 0.929412, 1)
+corner_radius_top_right = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_r02kd"]
+font = ExtResource("1_5ejwb")
+font_size = 175
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shql4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -240.0
+offset_right = 234.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2fd5j")
+
+[node name="Moves" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = -104.0
+offset_right = 91.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_r02kd")
+horizontal_alignment = 1
+vertical_alignment = 1
