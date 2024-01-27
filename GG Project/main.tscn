@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://ceceqgu2bfadj"]
+[gd_scene load_steps=14 format=3 uid="uid://ceceqgu2bfadj"]
 
 [ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="1_5oit6"]
 [ext_resource type="Script" path="res://Player.gd" id="2_cxd6o"]
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_r8okj"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_f0t3v"]
 [ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_acvie"]
+[ext_resource type="Script" path="res://Button.gd" id="6_py10j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwydq"]
 texture = ExtResource("1_5oit6")
@@ -242,3 +243,7 @@ z_index = 2
 position = Vector2(88, 152)
 collision_layer = 2
 collision_mask = 2
+
+[node name="Node2D" type="Node2D" parent="."]
+process_mode = 2
+script = ExtResource("6_py10j")
