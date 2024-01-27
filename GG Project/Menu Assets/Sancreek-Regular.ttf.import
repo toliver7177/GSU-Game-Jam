@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://mn642hb1nsw5"
-path="res://.godot/imported/Sancreek-Regular.ttf-2c8a959748996f3aec6031ace1581954.fontdata"
+path="res://.godot/imported/Sancreek-Regular.ttf-3953672fde39d7efa921e5c95d6413ca.fontdata"
 
 [deps]
 
-source_file="res://Sancreek-Regular.ttf"
-dest_files=["res://.godot/imported/Sancreek-Regular.ttf-2c8a959748996f3aec6031ace1581954.fontdata"]
+source_file="res://Menu Assets/Sancreek-Regular.ttf"
+dest_files=["res://.godot/imported/Sancreek-Regular.ttf-3953672fde39d7efa921e5c95d6413ca.fontdata"]
 
 [params]
 

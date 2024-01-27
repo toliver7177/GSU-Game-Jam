@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jnrkuvwlt6fv"
-path="res://.godot/imported/Right Hover.png-c4dc72f7bc2f54e5e51c48031efa9a11.ctex"
+uid="uid://cfig4dkdxs0k"
+path="res://.godot/imported/Left Normal.png-f8b4f54177e6e5c96e1daf6accde90db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Right Hover.png"
-dest_files=["res://.godot/imported/Right Hover.png-c4dc72f7bc2f54e5e51c48031efa9a11.ctex"]
+source_file="res://Menu Assets/Left Normal.png"
+dest_files=["res://.godot/imported/Left Normal.png-f8b4f54177e6e5c96e1daf6accde90db.ctex"]
 
 [params]
 

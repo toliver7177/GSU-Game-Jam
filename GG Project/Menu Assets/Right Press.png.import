@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0bmyc760j5pp"
-path="res://.godot/imported/Left Disabled.png-cce645edefa1179302ec5cf5d4ca0c0c.ctex"
+uid="uid://tkb6v5433alu"
+path="res://.godot/imported/Right Press.png-87cf615d4d6d70d0eeba23384ce95907.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Left Disabled.png"
-dest_files=["res://.godot/imported/Left Disabled.png-cce645edefa1179302ec5cf5d4ca0c0c.ctex"]
+source_file="res://Menu Assets/Right Press.png"
+dest_files=["res://.godot/imported/Right Press.png-87cf615d4d6d70d0eeba23384ce95907.ctex"]
 
 [params]
 
