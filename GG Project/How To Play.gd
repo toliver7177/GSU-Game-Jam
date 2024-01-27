@@ -8,22 +8,23 @@ var progress = 0
 func _ready():
 	var player_vars = get_node("/root/StageVariables")
 
-
+#Change scene to main Menu screen
 func _on_back_but_pressed():
 	get_tree().change_scene_to_file("res://Main Menu.tscn")
 	#StageVariables.moves += 1
 	#print(StageVariables.moves)
 
-
+#Increment progress
 func _on_left_but_pressed():
 	if progress > 0:
 		progress -= 1
 
-
+#Decrease progress
 func _on_right_but_pressed():
 	if progress < 4:
 		progress += 1
 
+#Change image shown based on value of progress
 func _process(bool):
 	match progress:
 		0:

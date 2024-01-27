@@ -247,7 +247,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kg2g1")
 
-[node name="Help Txt" type="Label" parent="Control2/Txt Hold"]
+[node name="StageTxt1" type="Label" parent="Control2/Txt Hold"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -261,13 +261,13 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+text = "DEBUG"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 3
 
-[node name="Button" type="Button" parent="Control2/Txt Hold"]
+[node name="Stage1" type="Button" parent="Control2/Txt Hold"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -375,6 +375,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_heon2")
 text = "Back to Title"
 
+[connection signal="pressed" from="Control2/Txt Hold/Stage1" to="." method="_on_stage_1_pressed"]
 [connection signal="pressed" from="Control2/LButHold/LeftBut" to="." method="_on_left_but_pressed"]
 [connection signal="pressed" from="Control2/RButHold/RightBut" to="." method="_on_right_but_pressed"]
 [connection signal="pressed" from="Control3/Panel/Back But" to="." method="_on_back_but_pressed"]
