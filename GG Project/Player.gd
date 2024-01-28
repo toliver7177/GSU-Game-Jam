@@ -7,7 +7,7 @@ class_name Player
 @onready var ray_cast_2d2 = $ObjCast
 @onready var _animation_player = $Ms_Clown/Marker2D/AnimationPlayer
 @onready var _clownsprite = $Ms_Clown/ClownGirl
-@onready var move_lbl = $MainCam/UIImg/MovCount
+
 var is_moving = false
 var is_floating = false
 var is_wet = false
@@ -49,7 +49,7 @@ func _process(_delta):
 	gameover()
 	#print("tick")
 	#unpause()
-	move_lbl.text = str(StageVariables.moves)
+	#move_lbl.text = str(StageVariables.moves)
 	
 func _ready():
 	
@@ -64,7 +64,7 @@ func _ready():
 	var freeze = get_node("/root/ColdSteps")
 	var hover = get_node("/root/Flying")
 	var cooling = get_node("/root/Soak")
-	move_lbl.text = str(StageVariables.moves)
+	#move_lbl.text = str(StageVariables.moves)
 	
 	
 func move(direction: Vector2):
@@ -78,7 +78,7 @@ func move(direction: Vector2):
 	
 	var tile_data: TileData = tile_map.get_cell_tile_data(0, target_tile)
 	
-	move_lbl.text = str(StageVariables.moves - 1)
+	#move_lbl.text = str(StageVariables.moves - 1)
 	if tile_data.get_custom_data("walkable") == false:
 		return
 	# Check if the player is cold and can walk on water tiles

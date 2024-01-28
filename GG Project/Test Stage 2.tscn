@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c6lgf0aif4lh3"]
+[gd_scene load_steps=25 format=3 uid="uid://2101xugr2axi"]
 
 [ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="1_q8c42"]
 [ext_resource type="Script" path="res://StageLoadVariables.gd" id="1_xekes"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_rige4"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_olk5l"]
 [ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_1qua0"]
-[ext_resource type="PackedScene" path="res://clownwoman.tscn" id="6_0d6lv"]
+[ext_resource type="PackedScene" uid="uid://bdxov8wwrnlgy" path="res://clownwoman.tscn" id="6_0d6lv"]
 [ext_resource type="Texture2D" uid="uid://3haqiarjeks3" path="res://Menu Assets/HUD.png" id="10_4t2xu"]
 [ext_resource type="FontFile" uid="uid://dk181dkmf3uki" path="res://Menu Assets/Namecat.ttf" id="11_qabwx"]
 [ext_resource type="Script" path="res://testing/labeltestui.gd" id="12_wwdx1"]
@@ -666,13 +666,15 @@ texture = SubResource("AtlasTexture_osasf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Iceitem"]
 shape = SubResource("RectangleShape2D_8wpt0")
 
-[node name="MainCam" type="Camera2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("12_wwdx1")
+
+[node name="MainCam" type="Camera2D" parent="Node2D"]
 position = Vector2(161, 155)
 scale = Vector2(0.9375, 0.9375)
 zoom = Vector2(2.3, 2.7)
-script = ExtResource("12_wwdx1")
 
-[node name="UIImg" type="TextureRect" parent="MainCam"]
+[node name="UIImg" type="TextureRect" parent="Node2D/MainCam"]
 offset_left = -267.0
 offset_top = -128.0
 offset_right = 267.0
@@ -680,7 +682,8 @@ offset_bottom = 128.0
 texture = ExtResource("10_4t2xu")
 expand_mode = 1
 
-[node name="MovCount" type="Label" parent="MainCam/UIImg"]
+[node name="MovCount" type="Label" parent="Node2D/MainCam/UIImg"]
+layout_mode = 0
 offset_left = 25.9333
 offset_top = 167.467
 offset_right = 67.9333
