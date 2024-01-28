@@ -1,7 +1,18 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://boiqpg6lyn6ak"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://boiqpg6lyn6ak"]
 
+[ext_resource type="Texture2D" uid="uid://da85gybhakpwe" path="res://PowerUpBallons/BallonsSpriteSheet.png" id="1_mdosw"]
 [ext_resource type="Texture2D" uid="uid://b3qx5hr75hxcq" path="res://circusTiles/circusspritesheet.png" id="1_qo3h3"]
 [ext_resource type="Texture2D" uid="uid://c3so6c0erem28" path="res://ObstaclesAssets/Fencespritesheet.png" id="2_j04hl"]
+[ext_resource type="Texture2D" uid="uid://0q53l4v4akp1" path="res://ObstaclesAssets/ObstacleTrapsSpriteSheet.png" id="3_t0b0u"]
+[ext_resource type="Texture2D" uid="uid://be8msigvppuq4" path="res://ObstaclesAssets/star.png" id="5_ke5a8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa3dd"]
+texture = ExtResource("1_mdosw")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m4htr"]
 texture = ExtResource("1_qo3h3")
@@ -17,6 +28,14 @@ texture_region_size = Vector2i(40, 40)
 0:2/0 = 0
 0:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ur0p"]
+texture = ExtResource("3_t0b0u")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3hpw"]
 texture = ExtResource("2_j04hl")
 texture_region_size = Vector2i(40, 40)
@@ -29,7 +48,15 @@ texture_region_size = Vector2i(40, 40)
 2:1/0 = 0
 3:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_edspr"]
+texture = ExtResource("5_ke5a8")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(40, 40)
 sources/1 = SubResource("TileSetAtlasSource_m4htr")
 sources/3 = SubResource("TileSetAtlasSource_n3hpw")
+sources/0 = SubResource("TileSetAtlasSource_pa3dd")
+sources/2 = SubResource("TileSetAtlasSource_7ur0p")
+sources/4 = SubResource("TileSetAtlasSource_edspr")
