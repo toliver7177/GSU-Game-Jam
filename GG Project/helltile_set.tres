@@ -1,11 +1,14 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b8cgmiutxbcp"]
+[gd_resource type="TileSet" load_steps=20 format=3 uid="uid://b8cgmiutxbcp"]
 
 [ext_resource type="Texture2D" uid="uid://dm87fwwxd63qh" path="res://ObstaclesAssets/stalagmite.png" id="1_kuold"]
 [ext_resource type="Texture2D" uid="uid://b445ikbjajy4r" path="res://HellTiles/HELLspriteSheet.png" id="1_rew64"]
 [ext_resource type="Texture2D" uid="uid://b6yli2uh8xpf3" path="res://HellTiles/spritesheethell.png" id="2_e7yce"]
 [ext_resource type="Texture2D" uid="uid://da85gybhakpwe" path="res://PowerUpBallons/BallonsSpriteSheet.png" id="3_yhjid"]
 [ext_resource type="Texture2D" uid="uid://0q53l4v4akp1" path="res://ObstaclesAssets/ObstacleTrapsSpriteSheet.png" id="5_5nn2t"]
+[ext_resource type="Texture2D" uid="uid://bnwjhsymhudxf" path="res://LevelConceptsSyd/starHELL.png" id="5_l8boj"]
 [ext_resource type="Texture2D" uid="uid://be8msigvppuq4" path="res://ObstaclesAssets/star.png" id="6_1jbqo"]
+[ext_resource type="Texture2D" uid="uid://c1b8m20ga1is1" path="res://LevelConceptsSyd/starcIRCUS.png" id="6_d0nbt"]
+[ext_resource type="Texture2D" uid="uid://dh5heq1ungy7b" path="res://LevelConceptsSyd/ObstacleTrapsSpriteSheet2.png" id="8_lrspo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mukll"]
 texture = ExtResource("1_kuold")
@@ -83,18 +86,50 @@ texture_region_size = Vector2i(40, 40)
 0:4/0 = 0
 0:4/0/custom_data_1 = true
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrqrm"]
+texture = ExtResource("5_l8boj")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+0:0/0/custom_data_1 = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8u3k"]
+texture = ExtResource("6_d0nbt")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+0:0/0/custom_data_1 = true
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovapk"]
 texture = ExtResource("5_5nn2t")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/custom_data_1 = true
+0:0/0/custom_data_3 = true
 1:0/0 = 0
+1:0/0/custom_data_1 = true
 2:0/0 = 0
+2:0/0/custom_data_1 = true
 3:0/0 = 0
+3:0/0/custom_data_1 = true
+3:0/0/custom_data_2 = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5cl2"]
+texture = ExtResource("8_lrspo")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+0:0/0/custom_data_1 = true
+1:0/0 = 0
+1:0/0/custom_data_1 = true
+2:0/0 = 0
+2:0/0/custom_data_1 = true
+3:0/0 = 0
+3:0/0/custom_data_1 = true
+3:0/0/custom_data_2 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wxl5"]
 texture = ExtResource("6_1jbqo")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/custom_data_1 = true
 
 [resource]
 tile_size = Vector2i(40, 40)
@@ -113,3 +148,6 @@ sources/0 = SubResource("TileSetAtlasSource_mukll")
 sources/6 = SubResource("TileSetAtlasSource_ovapk")
 sources/9 = SubResource("TileSetAtlasSource_4wxl5")
 sources/10 = SubResource("TileSetAtlasSource_gkspo")
+sources/4 = SubResource("TileSetAtlasSource_yrqrm")
+sources/5 = SubResource("TileSetAtlasSource_l8u3k")
+sources/7 = SubResource("TileSetAtlasSource_x5cl2")
