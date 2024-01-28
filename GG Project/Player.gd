@@ -8,7 +8,7 @@ class_name Player
 var is_moving = false
 var is_floating = false
 var has_water = false
-var is_cold = false;
+var is_cold = false
 var collision
 
 
@@ -37,9 +37,9 @@ func _ready():
 	has_water = false
 	is_cold = false
 	var _Player_vars = get_node("/root/StageVariables")
-	StageVariables.moves = 10
+	StageVariables.moves = 1000
 	
-	
+	var freeze = get_node("/root/ColdSteps")
 	
 func move(direction: Vector2):
 	
@@ -55,6 +55,17 @@ func move(direction: Vector2):
 	
 	if tile_data.get_custom_data("walkable") == false:
 		return
+	# Check if the player is cold and can walk on water tiles
+	if tile_data.get_custom_data("water") == true && is_cold == false:
+		return
+	if tile_data.get_custom_data("water") == true && is_cold == true:
+		tile_map.set_cell(0,Vector2i(target_tile.x,target_tile.y),0,Vector2i(2,5))
+		ColdSteps.cold_steps -= 1
+		print (ColdSteps.cold_steps)
+		  
+	if ColdSteps.cold_steps <= 0:
+		is_cold = false	
+		print_debug("No longer cold")
 	
 	ray_cast_2d.target_position = direction * 16
 	ray_cast_2d.force_raycast_update()
@@ -114,6 +125,8 @@ func wet(): #Function that activates the floatitem effect
 	has_water = true
 	print_debug("Is Wet")
 func ice(): #Function that activates the floatitem effect
+	is_cold = true
+	ColdSteps.cold_steps = 5
 	print_debug("Is Cold")
 
 func clear(): #Function that removes all item effects

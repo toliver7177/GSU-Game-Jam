@@ -8,6 +8,7 @@ atlas = ExtResource("2_jo0bt")
 region = Rect2(128, 144, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kp8lu"]
+size = Vector2(17, 17)
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 2
@@ -15,11 +16,12 @@ collision_mask = 2
 script = ExtResource("1_xlfne")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 0.25)
-scale = Vector2(0.5, 0.4875)
+position = Vector2(8.125, 7.94844)
+scale = Vector2(0.984375, 1.00645)
 texture = SubResource("AtlasTexture_ucpkm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 8.5)
 shape = SubResource("RectangleShape2D_kp8lu")
 
 [connection signal="area_entered" from="." to="." method="_on_wateritem_area_entered"]
