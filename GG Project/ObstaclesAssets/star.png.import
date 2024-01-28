@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwmqkphuvgeke"
-path="res://.godot/imported/ObstacleTrapsSpriteSheet.jpg-b8dc2f917a75b8ae2c5da76032f4d811.ctex"
+uid="uid://be8msigvppuq4"
+path="res://.godot/imported/star.png-d9143fc067ec5bac108f745a9268961c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ObstaclesAssets/ObstacleTrapsSpriteSheet.jpg"
-dest_files=["res://.godot/imported/ObstacleTrapsSpriteSheet.jpg-b8dc2f917a75b8ae2c5da76032f4d811.ctex"]
+source_file="res://ObstaclesAssets/star.png"
+dest_files=["res://.godot/imported/star.png-d9143fc067ec5bac108f745a9268961c.ctex"]
 
 [params]
 

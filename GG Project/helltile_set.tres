@@ -1,7 +1,17 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b8cgmiutxbcp"]
+[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b8cgmiutxbcp"]
 
+[ext_resource type="Texture2D" uid="uid://dm87fwwxd63qh" path="res://ObstaclesAssets/stalagmite.png" id="1_kuold"]
 [ext_resource type="Texture2D" uid="uid://b445ikbjajy4r" path="res://HellTiles/HELLspriteSheet.png" id="1_rew64"]
 [ext_resource type="Texture2D" uid="uid://b6yli2uh8xpf3" path="res://HellTiles/spritesheethell.png" id="2_e7yce"]
+[ext_resource type="Texture2D" uid="uid://da85gybhakpwe" path="res://PowerUpBallons/BallonsSpriteSheet.png" id="3_yhjid"]
+[ext_resource type="Texture2D" uid="uid://0q53l4v4akp1" path="res://ObstaclesAssets/ObstacleTrapsSpriteSheet.png" id="5_5nn2t"]
+[ext_resource type="Texture2D" uid="uid://be8msigvppuq4" path="res://ObstaclesAssets/star.png" id="6_1jbqo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mukll"]
+texture = ExtResource("1_kuold")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdbla"]
 texture = ExtResource("1_rew64")
@@ -15,6 +25,14 @@ texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
 2:0/0 = 0
 1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkspo"]
+texture = ExtResource("3_yhjid")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj002"]
 texture = ExtResource("2_e7yce")
@@ -46,8 +64,25 @@ texture_region_size = Vector2i(40, 40)
 2:3/0 = 0
 0:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ovapk"]
+texture = ExtResource("5_5nn2t")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wxl5"]
+texture = ExtResource("6_1jbqo")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(40, 40)
 sources/1 = SubResource("TileSetAtlasSource_xdbla")
 sources/2 = SubResource("TileSetAtlasSource_vj002")
 sources/3 = SubResource("TileSetAtlasSource_7iphe")
+sources/0 = SubResource("TileSetAtlasSource_mukll")
+sources/6 = SubResource("TileSetAtlasSource_ovapk")
+sources/9 = SubResource("TileSetAtlasSource_4wxl5")
+sources/10 = SubResource("TileSetAtlasSource_gkspo")
