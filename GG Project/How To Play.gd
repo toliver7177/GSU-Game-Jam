@@ -35,6 +35,11 @@ func _process(bool):
 			$Control/Panel/Panel/GameplayImg3.visible = false
 			$Control/Panel/Panel/GameplayImg4.visible = false
 			$Control/Panel/Panel/GameplayImg5.visible = false
+			$Control2/TxtHold/HelpTxt.visible = true
+			$Control2/TxtHold/HelpTxt2.visible = false
+			$Control2/TxtHold/HelpTxt3.visible = false
+			$Control2/TxtHold/HelpTxt4.visible = false
+			$Control2/TxtHold/HelpTxt5.visible = false
 		1:
 			$Control2/LButHold/LeftBut.disabled = false
 			$Control2/RButHold/RightBut.disabled = false
@@ -43,6 +48,11 @@ func _process(bool):
 			$Control/Panel/Panel/GameplayImg3.visible = false
 			$Control/Panel/Panel/GameplayImg4.visible = false
 			$Control/Panel/Panel/GameplayImg5.visible = false
+			$Control2/TxtHold/HelpTxt.visible = false
+			$Control2/TxtHold/HelpTxt2.visible = true
+			$Control2/TxtHold/HelpTxt3.visible = false
+			$Control2/TxtHold/HelpTxt4.visible = false
+			$Control2/TxtHold/HelpTxt5.visible = false
 		2:
 			$Control2/LButHold/LeftBut.disabled = false
 			$Control2/RButHold/RightBut.disabled = false
@@ -51,6 +61,11 @@ func _process(bool):
 			$Control/Panel/Panel/GameplayImg3.visible = true
 			$Control/Panel/Panel/GameplayImg4.visible = false
 			$Control/Panel/Panel/GameplayImg5.visible = false
+			$Control2/TxtHold/HelpTxt.visible = false
+			$Control2/TxtHold/HelpTxt2.visible = false
+			$Control2/TxtHold/HelpTxt3.visible = true
+			$Control2/TxtHold/HelpTxt4.visible = false
+			$Control2/TxtHold/HelpTxt5.visible = false
 		3:
 			$Control2/LButHold/LeftBut.disabled = false
 			$Control2/RButHold/RightBut.disabled = false
@@ -59,6 +74,11 @@ func _process(bool):
 			$Control/Panel/Panel/GameplayImg3.visible = false
 			$Control/Panel/Panel/GameplayImg4.visible = true
 			$Control/Panel/Panel/GameplayImg5.visible = false
+			$Control2/TxtHold/HelpTxt.visible = false
+			$Control2/TxtHold/HelpTxt2.visible = false
+			$Control2/TxtHold/HelpTxt3.visible = false
+			$Control2/TxtHold/HelpTxt4.visible = true
+			$Control2/TxtHold/HelpTxt5.visible = false
 		4:
 			$Control2/LButHold/LeftBut.disabled = false
 			$Control2/RButHold/RightBut.disabled = true
@@ -67,3 +87,8 @@ func _process(bool):
 			$Control/Panel/Panel/GameplayImg3.visible = false
 			$Control/Panel/Panel/GameplayImg4.visible = false
 			$Control/Panel/Panel/GameplayImg5.visible = true
+			$Control2/TxtHold/HelpTxt.visible = false
+			$Control2/TxtHold/HelpTxt2.visible = false
+			$Control2/TxtHold/HelpTxt3.visible = false
+			$Control2/TxtHold/HelpTxt4.visible = false
+			$Control2/TxtHold/HelpTxt5.visible = true
