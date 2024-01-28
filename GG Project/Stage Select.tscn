@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dbnc22dbtij1b"]
+[gd_scene load_steps=34 format=3 uid="uid://dbnc22dbtij1b"]
 
 [ext_resource type="Script" path="res://Stage Select.gd" id="1_12got"]
 [ext_resource type="Texture2D" uid="uid://chxyxs7hlkime" path="res://Menu Assets/Clownmenu1.png" id="2_4wgp2"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://peqw1qojdks3" path="res://StageSelectImgs/test9.jpg" id="6_mhl03"]
 [ext_resource type="Texture2D" uid="uid://bcuhofxeq0eah" path="res://StageSelectImgs/testX.jpg" id="7_dw4iy"]
 [ext_resource type="Texture2D" uid="uid://cfig4dkdxs0k" path="res://Left Normal.png" id="8_gb8e1"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="9_dtjl7"]
 [ext_resource type="Texture2D" uid="uid://dx517dksv1481" path="res://Left Press.png" id="9_tuish"]
 [ext_resource type="Texture2D" uid="uid://1vdell0wdci5" path="res://Left Hover.png" id="10_fr6io"]
 [ext_resource type="Texture2D" uid="uid://0bmyc760j5pp" path="res://Left Disabled.png" id="11_v3qvv"]
@@ -33,6 +34,10 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8nup"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2253w"]
+font = ExtResource("9_dtjl7")
+font_size = 50
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wt6h0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trhmt"]
@@ -42,6 +47,22 @@ bg_color = Color(0, 0, 0, 0.294118)
 bg_color = Color(0, 0, 0, 0.745098)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hky4o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5y1t"]
+font = ExtResource("9_dtjl7")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_iao7c"]
+font = ExtResource("9_dtjl7")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_8u86y"]
+font = ExtResource("9_dtjl7")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_hrq4j"]
+font = ExtResource("9_dtjl7")
+font_size = 50
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbyq"]
 
@@ -245,13 +266,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -55.0
-offset_right = 335.0
-offset_bottom = 59.0
+offset_left = -322.286
+offset_top = -55.0714
+offset_right = 304.714
+offset_bottom = 58.9286
 grow_horizontal = 2
 grow_vertical = 2
-text = "DEBUG"
+text = "Stage 1"
+label_settings = SubResource("LabelSettings_2253w")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -290,6 +312,7 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Stage 2"
+label_settings = SubResource("LabelSettings_g5y1t")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -329,6 +352,7 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Stage  3"
+label_settings = SubResource("LabelSettings_iao7c")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -368,6 +392,7 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Stage 4"
+label_settings = SubResource("LabelSettings_8u86y")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -407,6 +432,7 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Stage 5"
+label_settings = SubResource("LabelSettings_hrq4j")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
