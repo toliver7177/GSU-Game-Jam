@@ -1,15 +1,13 @@
-[gd_scene load_steps=34 format=3 uid="uid://dbnc22dbtij1b"]
+[gd_scene load_steps=32 format=3 uid="uid://dbnc22dbtij1b"]
 
 [ext_resource type="Script" path="res://Stage Select.gd" id="1_12got"]
 [ext_resource type="Texture2D" uid="uid://chxyxs7hlkime" path="res://Menu Assets/Clownmenu1.png" id="2_4wgp2"]
 [ext_resource type="Texture2D" uid="uid://bjbljchhx23gy" path="res://Menu Assets/HUD1.png" id="3_6a6a4"]
-[ext_resource type="Texture2D" uid="uid://bsmpv4jywrai5" path="res://StageSelectImgs/test6.png" id="3_oebvs"]
-[ext_resource type="Texture2D" uid="uid://bejkj71yubx4o" path="res://StageSelectImgs/test7.png" id="4_fmvt6"]
-[ext_resource type="Texture2D" uid="uid://jawdmc3xurrj" path="res://StageSelectImgs/test8.jpg" id="5_v7yol"]
-[ext_resource type="Texture2D" uid="uid://peqw1qojdks3" path="res://StageSelectImgs/test9.jpg" id="6_mhl03"]
-[ext_resource type="Texture2D" uid="uid://bcuhofxeq0eah" path="res://StageSelectImgs/testX.jpg" id="7_dw4iy"]
+[ext_resource type="Texture2D" uid="uid://dsyxebanfp637" path="res://Menu Assets/CIRCUS01.png" id="4_el4l1"]
+[ext_resource type="Texture2D" uid="uid://13dywjvej2jt" path="res://Menu Assets/CIRCUS02.png" id="5_37akm"]
+[ext_resource type="Texture2D" uid="uid://sqbf3louc5ao" path="res://Menu Assets/GameOver.png" id="6_5rfqr"]
 [ext_resource type="Texture2D" uid="uid://cfig4dkdxs0k" path="res://Left Normal.png" id="8_gb8e1"]
-[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="9_dtjl7"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Sancreek-Regular.ttf" id="9_dtjl7"]
 [ext_resource type="Texture2D" uid="uid://dx517dksv1481" path="res://Left Press.png" id="9_tuish"]
 [ext_resource type="Texture2D" uid="uid://1vdell0wdci5" path="res://Left Hover.png" id="10_fr6io"]
 [ext_resource type="Texture2D" uid="uid://0bmyc760j5pp" path="res://Left Disabled.png" id="11_v3qvv"]
@@ -122,10 +120,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -224.0
-offset_right = 384.0
-offset_bottom = 224.0
+offset_left = -536.0
+offset_top = -312.0
+offset_right = 504.0
+offset_bottom = 480.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rf3fm")
@@ -137,15 +135,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -208.0
-offset_right = 368.0
-offset_bottom = 208.0
+offset_left = -504.0
+offset_top = -380.0
+offset_right = 504.0
+offset_bottom = 388.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_x0ci3")
 
 [node name="GameplayImg" type="TextureRect" parent="Control/Panel/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -158,7 +157,7 @@ offset_right = 368.0
 offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_oebvs")
+texture = ExtResource("4_el4l1")
 expand_mode = 1
 
 [node name="GameplayImg2" type="TextureRect" parent="Control/Panel/Panel"]
@@ -175,7 +174,7 @@ offset_right = 368.0
 offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_fmvt6")
+texture = ExtResource("5_37akm")
 expand_mode = 1
 
 [node name="GameplayImg3" type="TextureRect" parent="Control/Panel/Panel"]
@@ -192,7 +191,7 @@ offset_right = 368.0
 offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_v7yol")
+texture = ExtResource("6_5rfqr")
 expand_mode = 1
 
 [node name="GameplayImg4" type="TextureRect" parent="Control/Panel/Panel"]
@@ -209,7 +208,7 @@ offset_right = 368.0
 offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_mhl03")
+texture = ExtResource("6_5rfqr")
 expand_mode = 1
 
 [node name="GameplayImg5" type="TextureRect" parent="Control/Panel/Panel"]
@@ -226,7 +225,7 @@ offset_right = 368.0
 offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_dw4iy")
+texture = ExtResource("6_5rfqr")
 expand_mode = 1
 
 [node name="Control2" type="Control" parent="."]

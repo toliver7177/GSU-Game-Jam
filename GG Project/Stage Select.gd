@@ -120,12 +120,12 @@ func _process(bool):
 
 #Set number of moves for selected stage and change scene
 func _on_stage_1_pressed():
-	StageVariables.moves = 10
-	get_tree().change_scene_to_file("res://main.tscn")
+	#StageVariables.moves = 10
+	get_tree().change_scene_to_file("uid://b6ipjsrpq47q6")
 
 
 func _on_stage_2_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("uid://dea6m6qj7t7yf")
 
 
 func _on_stage_3_pressed():

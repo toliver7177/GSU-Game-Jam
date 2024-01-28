@@ -1,18 +1,19 @@
-[gd_scene load_steps=27 format=3 uid="uid://rqi1fct1t2dq"]
+[gd_scene load_steps=31 format=3 uid="uid://rqi1fct1t2dq"]
 
 [ext_resource type="Script" path="res://How To Play.gd" id="1_ygg8e"]
 [ext_resource type="Texture2D" uid="uid://chxyxs7hlkime" path="res://Menu Assets/Clownmenu1.png" id="2_5f6tv"]
 [ext_resource type="Texture2D" uid="uid://cfig4dkdxs0k" path="res://Left Normal.png" id="3_aypi6"]
 [ext_resource type="Texture2D" uid="uid://cyh0u57uswsn1" path="res://Clown Girl.png" id="3_rtpcr"]
 [ext_resource type="Texture2D" uid="uid://dpdoj0ynk86iq" path="res://Right Normal.png" id="4_cj8a0"]
-[ext_resource type="Texture2D" uid="uid://bvj1coktchbb1" path="res://HowToImgs/test2.png" id="4_hqsoe"]
+[ext_resource type="Texture2D" uid="uid://cvp21xr46tfcl" path="res://Kid Assets/CryingKid2.png" id="4_pyau6"]
 [ext_resource type="Texture2D" uid="uid://c6bgekpasu4hm" path="res://Menu Assets/BalloonRed.png" id="5_slfq4"]
-[ext_resource type="Texture2D" uid="uid://gtreim0hyvo6" path="res://HowToImgs/test4.png" id="6_hjpae"]
-[ext_resource type="Texture2D" uid="uid://ck8g2cw5psij1" path="res://HowToImgs/test5.png" id="7_nk8y8"]
+[ext_resource type="Texture2D" uid="uid://fooq0f45rpaq" path="res://Menu Assets/BalloonBlue.png" id="6_4rocu"]
+[ext_resource type="Texture2D" uid="uid://cdabwyjybiupw" path="res://Menu Assets/BalloonWhite.png" id="7_i00jk"]
 [ext_resource type="Texture2D" uid="uid://bjbljchhx23gy" path="res://Menu Assets/HUD1.png" id="8_h2sy5"]
 [ext_resource type="Texture2D" uid="uid://dx517dksv1481" path="res://Left Press.png" id="9_7oenx"]
-[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="9_bjm7v"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Sancreek-Regular.ttf" id="9_bjm7v"]
 [ext_resource type="Texture2D" uid="uid://1vdell0wdci5" path="res://Left Hover.png" id="10_7rrsf"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="10_8fjol"]
 [ext_resource type="Texture2D" uid="uid://0bmyc760j5pp" path="res://Left Disabled.png" id="11_8digh"]
 [ext_resource type="Texture2D" uid="uid://tkb6v5433alu" path="res://Right Press.png" id="13_r5rry"]
 [ext_resource type="Texture2D" uid="uid://jnrkuvwlt6fv" path="res://Right Hover.png" id="14_msa0p"]
@@ -37,8 +38,20 @@ corner_radius_bottom_left = 10
 font = ExtResource("9_bjm7v")
 font_size = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_rojlg"]
+font = ExtResource("10_8fjol")
+font_size = 40
+
 [sub_resource type="LabelSettings" id="LabelSettings_n4nrd"]
 font = ExtResource("9_bjm7v")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_lj0yv"]
+font = ExtResource("10_8fjol")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4gv1"]
+font = ExtResource("10_8fjol")
 font_size = 40
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbyq"]
@@ -142,26 +155,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -208.0
-offset_right = 368.0
-offset_bottom = 208.0
+offset_left = -205.0
+offset_top = -326.0
+offset_right = 163.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_hqsoe")
+texture = ExtResource("4_pyau6")
 expand_mode = 1
 
 [node name="GameplayImg3" type="TextureRect" parent="Control/Panel/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -512.0
-offset_top = -352.0
-offset_right = 512.0
-offset_bottom = 352.0
+offset_left = -400.0
+offset_top = -271.0
+offset_right = 384.0
+offset_bottom = 241.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_slfq4")
@@ -176,16 +190,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -368.0
-offset_top = -208.0
+offset_top = -296.0
 offset_right = 368.0
-offset_bottom = 208.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_hjpae")
+texture = ExtResource("6_4rocu")
 expand_mode = 1
 
 [node name="GameplayImg5" type="TextureRect" parent="Control/Panel/Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -193,12 +206,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -368.0
-offset_top = -208.0
+offset_top = -296.0
 offset_right = 368.0
-offset_bottom = 208.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_nk8y8")
+texture = ExtResource("7_i00jk")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -271,13 +284,15 @@ offset_right = 344.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "TEMP TEXT 2"
+text = "Make it to the kids to turn those frowns upside down!"
+label_settings = SubResource("LabelSettings_rojlg")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="HelpTxt3" type="Label" parent="Control2/TxtHold"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -311,14 +326,14 @@ offset_right = 344.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "TEMP TEXT 4"
+text = "Blue balloons let you walk over lava and put out fire!"
+label_settings = SubResource("LabelSettings_lj0yv")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="HelpTxt5" type="Label" parent="Control2/TxtHold"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -331,7 +346,8 @@ offset_right = 344.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "TEMP TEXT 5"
+text = "White balloons let you freeze and walk on water!"
+label_settings = SubResource("LabelSettings_v4gv1")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
