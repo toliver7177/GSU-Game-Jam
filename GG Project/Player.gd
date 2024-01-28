@@ -40,7 +40,9 @@ func _process(_delta):
 		move(Vector2.RIGHT)
 		_animation_player.advance(0)
 		
-	
+	if _animation_player.current_animation != "Idle" && _animation_player.current_animation != "LeftMove":
+		
+		_animation_player.play("Idle")
 		
 		
 	gameover()

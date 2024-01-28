@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c74yd3wyyr5mx"]
+[gd_scene load_steps=9 format=3 uid="uid://bdxov8wwrnlgy"]
 
 [ext_resource type="Texture2D" uid="uid://c5mduul4r8bqr" path="res://DisectedClown.png" id="1_6yw0c"]
 [ext_resource type="Texture2D" uid="uid://cyh0u57uswsn1" path="res://Clown Girl.png" id="2_7fwnr"]
@@ -763,7 +763,6 @@ bone_angle = 77.838
 
 [node name="ArmR2" type="Bone2D" parent="Marker2D/Skeleton2D/Hip/Torso/ArmR"]
 position = Vector2(36, 136)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 36, 136)
 auto_calculate_length_and_angle = false
 length = 135.811
@@ -785,7 +784,6 @@ bone_angle = 77.838
 
 [node name="ArmL2" type="Bone2D" parent="Marker2D/Skeleton2D/Hip/Torso/ArmL1"]
 position = Vector2(-68, 151)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -68, 151)
 auto_calculate_length_and_angle = false
 length = 135.811

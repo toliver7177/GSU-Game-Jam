@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_rige4"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_olk5l"]
 [ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_1qua0"]
-[ext_resource type="PackedScene" uid="uid://c74yd3wyyr5mx" path="res://clownwoman.tscn" id="6_0d6lv"]
+[ext_resource type="PackedScene" uid="uid://bdxov8wwrnlgy" path="res://clownwoman.tscn" id="6_0d6lv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwydq"]
 texture = ExtResource("1_q8c42")
