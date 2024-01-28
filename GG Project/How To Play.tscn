@@ -1,53 +1,45 @@
-[gd_scene load_steps=24 format=3 uid="uid://rqi1fct1t2dq"]
+[gd_scene load_steps=27 format=3 uid="uid://rqi1fct1t2dq"]
 
-[ext_resource type="Texture2D" uid="uid://f2t4llyunh5p" path="res://Menu Assets/DAAAN.png" id="1_eiosq"]
 [ext_resource type="Script" path="res://How To Play.gd" id="1_ygg8e"]
-[ext_resource type="Texture2D" uid="uid://dqqt7cxjd3762" path="res://HowToImgs/test.png" id="2_nl03g"]
-[ext_resource type="Texture2D" uid="uid://cfig4dkdxs0k" path="res://Menu Assets/Left Normal.png" id="3_aypi6"]
-[ext_resource type="Texture2D" uid="uid://dpdoj0ynk86iq" path="res://Menu Assets/Right Normal.png" id="4_cj8a0"]
+[ext_resource type="Texture2D" uid="uid://chxyxs7hlkime" path="res://Menu Assets/Clownmenu1.png" id="2_5f6tv"]
+[ext_resource type="Texture2D" uid="uid://cfig4dkdxs0k" path="res://Left Normal.png" id="3_aypi6"]
+[ext_resource type="Texture2D" uid="uid://cyh0u57uswsn1" path="res://Clown Girl.png" id="3_rtpcr"]
+[ext_resource type="Texture2D" uid="uid://dpdoj0ynk86iq" path="res://Right Normal.png" id="4_cj8a0"]
 [ext_resource type="Texture2D" uid="uid://bvj1coktchbb1" path="res://HowToImgs/test2.png" id="4_hqsoe"]
-[ext_resource type="Texture2D" uid="uid://b4kkbewblqka7" path="res://HowToImgs/test3.png" id="5_86f16"]
+[ext_resource type="Texture2D" uid="uid://c6bgekpasu4hm" path="res://Menu Assets/BalloonRed.png" id="5_slfq4"]
 [ext_resource type="Texture2D" uid="uid://gtreim0hyvo6" path="res://HowToImgs/test4.png" id="6_hjpae"]
 [ext_resource type="Texture2D" uid="uid://ck8g2cw5psij1" path="res://HowToImgs/test5.png" id="7_nk8y8"]
-[ext_resource type="Texture2D" uid="uid://dx517dksv1481" path="res://Menu Assets/Left Press.png" id="9_7oenx"]
-[ext_resource type="Texture2D" uid="uid://1vdell0wdci5" path="res://Menu Assets/Left Hover.png" id="10_7rrsf"]
-[ext_resource type="Texture2D" uid="uid://0bmyc760j5pp" path="res://Menu Assets/Left Disabled.png" id="11_8digh"]
-[ext_resource type="Texture2D" uid="uid://tkb6v5433alu" path="res://Menu Assets/Right Press.png" id="13_r5rry"]
-[ext_resource type="Texture2D" uid="uid://jnrkuvwlt6fv" path="res://Menu Assets/Right Hover.png" id="14_msa0p"]
-[ext_resource type="Texture2D" uid="uid://dyo2sxr2hlqum" path="res://Menu Assets/Right Disabled.png" id="15_nmd3n"]
+[ext_resource type="Texture2D" uid="uid://bjbljchhx23gy" path="res://Menu Assets/HUD1.png" id="8_h2sy5"]
+[ext_resource type="Texture2D" uid="uid://dx517dksv1481" path="res://Left Press.png" id="9_7oenx"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="9_bjm7v"]
+[ext_resource type="Texture2D" uid="uid://1vdell0wdci5" path="res://Left Hover.png" id="10_7rrsf"]
+[ext_resource type="Texture2D" uid="uid://0bmyc760j5pp" path="res://Left Disabled.png" id="11_8digh"]
+[ext_resource type="Texture2D" uid="uid://tkb6v5433alu" path="res://Right Press.png" id="13_r5rry"]
+[ext_resource type="Texture2D" uid="uid://jnrkuvwlt6fv" path="res://Right Hover.png" id="14_msa0p"]
+[ext_resource type="Texture2D" uid="uid://dyo2sxr2hlqum" path="res://Right Disabled.png" id="15_nmd3n"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf3fm"]
-bg_color = Color(0.290196, 0.431373, 0.929412, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4px6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0ci3"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0.470588, 0.466667, 0.882353, 1)
+border_width_left = 7
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg2g1"]
-bg_color = Color(0.909804, 0.101961, 0.317647, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgo1t"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edvhb"]
-bg_color = Color(0.909804, 0.101961, 0.317647, 1)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0.584314, 0.109804, 0.239216, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="LabelSettings" id="LabelSettings_i2b6c"]
+font = ExtResource("9_bjm7v")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4nrd"]
+font = ExtResource("9_bjm7v")
+font_size = 40
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbyq"]
 
@@ -78,9 +70,9 @@ script = ExtResource("1_ygg8e")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_eiosq")
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_5f6tv")
 expand_mode = 1
 
 [node name="Control" type="Control" parent="."]
@@ -88,10 +80,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -392.0
-offset_top = 24.0
-offset_right = 376.0
-offset_bottom = 472.0
+offset_left = -400.0
+offset_top = 128.0
+offset_right = 368.0
+offset_bottom = 576.0
 grow_horizontal = 2
 
 [node name="Panel" type="Panel" parent="Control"]
@@ -107,7 +99,7 @@ offset_right = 384.0
 offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_rf3fm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m4px6")
 
 [node name="Panel" type="Panel" parent="Control/Panel"]
 layout_mode = 1
@@ -116,29 +108,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -208.0
-offset_right = 368.0
-offset_bottom = 208.0
+offset_left = -496.0
+offset_top = -288.0
+offset_right = 528.0
+offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_x0ci3")
 
 [node name="GameplayImg" type="TextureRect" parent="Control/Panel/Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -208.0
-offset_right = 368.0
-offset_bottom = 208.0
+offset_left = -512.0
+offset_top = -352.0
+offset_right = 512.0
+offset_bottom = 352.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_nl03g")
+texture = ExtResource("3_rtpcr")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="GameplayImg2" type="TextureRect" parent="Control/Panel/Panel"]
 visible = false
@@ -158,20 +152,19 @@ texture = ExtResource("4_hqsoe")
 expand_mode = 1
 
 [node name="GameplayImg3" type="TextureRect" parent="Control/Panel/Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -208.0
-offset_right = 368.0
-offset_bottom = 208.0
+offset_left = -512.0
+offset_top = -352.0
+offset_right = 512.0
+offset_bottom = 352.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_86f16")
+texture = ExtResource("5_slfq4")
 expand_mode = 1
 
 [node name="GameplayImg4" type="TextureRect" parent="Control/Panel/Panel"]
@@ -208,6 +201,12 @@ grow_vertical = 2
 texture = ExtResource("7_nk8y8")
 expand_mode = 1
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_h2sy5")
+
 [node name="Control2" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -215,10 +214,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -384.0
-offset_top = -144.0
-offset_right = 376.0
-offset_bottom = -16.0
+offset_left = -464.0
+offset_top = -280.0
+offset_right = 464.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -235,23 +234,24 @@ offset_right = 308.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kg2g1")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lgo1t")
 
 [node name="HelpTxt" type="Label" parent="Control2/TxtHold"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -48.0
-offset_right = 292.0
-offset_bottom = 48.0
+offset_left = -360.0
+offset_top = -44.0
+offset_right = 344.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
-text = "TEMP TEXT 1"
+text = "Help Ms.Clown cheer up the crying kids!"
+label_settings = SubResource("LabelSettings_i2b6c")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -265,13 +265,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -48.0
-offset_right = 292.0
-offset_bottom = 48.0
+offset_left = -360.0
+offset_top = -44.0
+offset_right = 344.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
 text = "TEMP TEXT 2"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -279,21 +278,20 @@ autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="HelpTxt3" type="Label" parent="Control2/TxtHold"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -48.0
-offset_right = 292.0
-offset_bottom = 48.0
+offset_left = -360.0
+offset_top = -44.0
+offset_right = 344.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
-text = "TEMP TEXT 3"
+text = "Red Balloons let you float over gaps!"
+label_settings = SubResource("LabelSettings_n4nrd")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -307,13 +305,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -48.0
-offset_right = 292.0
-offset_bottom = 48.0
+offset_left = -360.0
+offset_top = -44.0
+offset_right = 344.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
 text = "TEMP TEXT 4"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -328,13 +325,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -292.0
-offset_top = -48.0
-offset_right = 292.0
-offset_bottom = 48.0
+offset_left = -360.0
+offset_top = -44.0
+offset_right = 344.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_edvhb")
 text = "TEMP TEXT 5"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -342,9 +338,13 @@ autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="LButHold" type="Panel" parent="Control2"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
 offset_right = 64.0
-offset_bottom = 128.0
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_okbyq")
 
 [node name="LeftBut" type="TextureButton" parent="Control2/LButHold"]
@@ -354,9 +354,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
+offset_left = -16.0
 offset_top = -64.0
-offset_right = 32.0
+offset_right = 48.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -370,16 +370,15 @@ stretch_mode = 5
 
 [node name="RButHold" type="Panel" parent="Control2"]
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 3
 anchor_left = 1.0
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -64.0
-offset_top = -56.0
-offset_bottom = 64.0
+offset_top = -120.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_j1jjw")
 
 [node name="RightBut" type="TextureButton" parent="Control2/RButHold"]
@@ -389,9 +388,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
+offset_left = -48.0
 offset_top = -60.0
-offset_right = 32.0
+offset_right = 16.0
 offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2

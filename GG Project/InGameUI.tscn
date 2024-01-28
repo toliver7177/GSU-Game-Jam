@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://due18i5a5b3p7"]
 
-[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="1_5ejwb"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Sancreek-Regular.ttf" id="1_5ejwb"]
 [ext_resource type="Script" path="res://InGameUI.gd" id="1_shql4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fd5j"]
