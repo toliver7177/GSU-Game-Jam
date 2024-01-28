@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b03win2avqme6"]
 
 [ext_resource type="Script" path="res://Main Menu.gd" id="1_o2xt0"]
-[ext_resource type="Texture2D" uid="uid://f2t4llyunh5p" path="res://DAAAN.png" id="1_rmmcm"]
 [ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Sancreek-Regular.ttf" id="2_l7lh7"]
+[ext_resource type="Texture2D" uid="uid://chxyxs7hlkime" path="res://Menu Assets/Clownmenu1.png" id="2_mxvh8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vvffy"]
 font = ExtResource("2_l7lh7")
@@ -66,9 +66,9 @@ script = ExtResource("1_o2xt0")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_rmmcm")
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_mxvh8")
 expand_mode = 1
 
 [node name="Control" type="Control" parent="."]
