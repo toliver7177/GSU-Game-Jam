@@ -145,7 +145,6 @@ position = Vector2(5.5, -16.5)
 texture = SubResource("AtlasTexture_fwgs3")
 
 [node name="CamerNode" type="Node2D" parent="."]
-visible = false
 position = Vector2(12, 0)
 scale = Vector2(0.9375, 0.9375)
 
@@ -156,20 +155,20 @@ zoom = Vector2(1.559, 1.83)
 
 [node name="UIImg" type="TextureRect" parent="CamerNode/MainCam"]
 z_index = 5
-offset_left = -267.0
-offset_top = -128.0
-offset_right = 267.0
-offset_bottom = 128.0
+offset_left = -661.0
+offset_top = -317.0
+offset_right = 656.0
+offset_bottom = 317.0
 texture = ExtResource("4_7p8um")
 expand_mode = 1
 
 [node name="MovCount" type="Label" parent="CamerNode/MainCam/UIImg"]
 z_index = 5
 layout_mode = 0
-offset_left = 22.7333
-offset_top = 165.333
-offset_right = 64.7333
-offset_bottom = 235.333
+offset_left = 53.0
+offset_top = 398.067
+offset_right = 162.0
+offset_bottom = 598.067
 rotation = -0.0843516
 pivot_offset = Vector2(20.2667, 34.1333)
 theme_override_fonts/font = ExtResource("5_2pd78")
@@ -180,10 +179,10 @@ vertical_alignment = 1
 [node name="MovCount2" type="Label" parent="CamerNode/MainCam/UIImg"]
 z_index = 5
 layout_mode = 0
-offset_left = 22.7333
-offset_top = 165.333
-offset_right = 64.7333
-offset_bottom = 235.333
+offset_left = 49.0
+offset_top = 420.0
+offset_right = 161.0
+offset_bottom = 573.0
 rotation = -0.0843516
 pivot_offset = Vector2(20.2667, 34.1333)
 theme_override_fonts/font = ExtResource("5_2pd78")
