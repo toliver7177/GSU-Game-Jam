@@ -13,9 +13,5 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	if %ClownWoman:
-		print("hi")
-		$"Area2D/Crying Sprite".hide()
-		$"Area2D/Happy Sprite".show()
-		$Area2D/CollisionShape2D.hide()
-		StageVariables.children_cosumed += 1
-
+		#queue_free()
+		print("apple")
