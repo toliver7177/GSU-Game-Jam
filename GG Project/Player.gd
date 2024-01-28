@@ -1,7 +1,7 @@
 extends Sprite2D
 class_name Player
 
-@onready var tile_map = $"../TileMap"
+@onready var tile_map = $".."
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $MoveCast
 @onready var ray_cast_2d2 = $ObjCast
@@ -67,7 +67,7 @@ func _ready():
 	var hover = get_node("/root/Flying")
 	var cooling = get_node("/root/Soak")
 	#move_lbl.text = str(StageVariables.moves)
-	
+	StageVariables.moves = 400
 func move(direction: Vector2):
 	
 	var current_tile: Vector2i = tile_map.local_to_map(global_position)

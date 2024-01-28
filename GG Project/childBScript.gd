@@ -17,4 +17,4 @@ func _on_area_2d_area_entered(area):
 		$"Area2D/Crying Sprite".hide()
 		$"Area2D/Happy Sprite".show()
 		$Area2D/CollisionShape2D.hide()
-		StageVariables.children_cosumed += 1
+		StageVariables.children_consumed += 1
