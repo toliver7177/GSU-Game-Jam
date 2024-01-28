@@ -3,17 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="1_c2xsr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_av7ou"]
-size = Vector2(16, 16)
+size = Vector2(16, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5iuu"]
 atlas = ExtResource("1_c2xsr")
-region = Rect2(96, 144, 16, 16)
+region = Rect2(112, 144, 16, 16)
 
 [node name="Area2D" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.8147e-06, -3.8147e-06)
+position = Vector2(8, 8.5)
 shape = SubResource("RectangleShape2D_av7ou")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
 texture = SubResource("AtlasTexture_a5iuu")

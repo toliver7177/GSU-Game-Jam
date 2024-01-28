@@ -7,13 +7,14 @@ class_name Player
 @onready var ray_cast_2d2 = $ObjCast
 var is_moving = false
 var is_floating = false
-var has_water = false
-var is_cold = false;
+var is_wet = false
+var is_cold = false
+var is_gameover = false
 var collision
 
 
 func _process(_delta):
-	if is_moving:
+	if is_moving || is_gameover:
 		return
 	
 	if Input.is_action_pressed("up"):
@@ -34,12 +35,15 @@ func _ready():
 
 	is_moving = false
 	is_floating = false
-	has_water = false
+	is_wet = false
 	is_cold = false
 	var _Player_vars = get_node("/root/StageVariables")
 	
 	
 	
+	var freeze = get_node("/root/ColdSteps")
+	var hover = get_node("/root/Flying")
+	var cooling = get_node("/root/Soak")
 	
 func move(direction: Vector2):
 	
@@ -55,6 +59,56 @@ func move(direction: Vector2):
 	
 	if tile_data.get_custom_data("walkable") == false:
 		return
+	# Check if the player is cold and can walk on water tiles
+	if tile_data.get_custom_data("water") == true && is_cold == false:
+		return
+	if tile_data.get_custom_data("hole") == true && is_floating == false:
+		return
+	if tile_data.get_custom_data("fire") == true && is_wet == false:
+		return
+	if tile_data.get_custom_data("lava") == true && is_wet == false:
+		return
+	
+	
+	if tile_data.get_custom_data("water") == true && is_cold == true:
+		tile_map.set_cell(0,Vector2i(target_tile.x,target_tile.y),0,Vector2i(2,5))
+		ColdSteps.cold_steps -= 1
+		print (ColdSteps.cold_steps)
+		
+	if tile_data.get_custom_data("fire") == true && is_wet == true:
+		tile_map.set_cell(0,Vector2i(target_tile.x,target_tile.y),0,Vector2i(0,4))
+	
+	if tile_data.get_custom_data("lava") == true && is_wet == true:
+		tile_map.set_cell(0,Vector2i(target_tile.x,target_tile.y),0,Vector2i(0,1))
+		Soak.lava_steps -= 1
+		print (Soak.lava_steps)
+	
+	if tile_data.get_custom_data("cool") == true:
+		tile_map.set_cell(0,Vector2i(target_tile.x,target_tile.y),0,Vector2i(8,2))
+	
+	if tile_data.get_custom_data("hole") == true && is_floating == true:
+		Flying.fly -= 1
+		print (Flying.fly)
+		
+	if tile_data.get_custom_data("spike") == true:
+		StageVariables.moves -= 1 #Calls to StageVariables global and updates current moves
+		print(StageVariables.moves) #For Debugging prints stage variables
+		clear()
+		
+	if tile_data.get_custom_data("clear") == true:
+		clear()
+	
+	if ColdSteps.cold_steps <= 0:
+		is_cold = false	
+		print_debug("No longer cold")
+	
+	if Flying.fly <= 0:
+		is_floating = false	
+		print_debug("You're Grounded")
+	
+	if Soak.lava_steps <= 0:
+		is_wet = false	
+		print_debug("Ow")
 	
 	ray_cast_2d.target_position = direction * 16
 	ray_cast_2d.force_raycast_update()
@@ -93,6 +147,7 @@ func move(direction: Vector2):
 				print("Water")
 				
 	is_moving = true
+	
 	global_position = tile_map.map_to_local(target_tile)
 	sprite_2d.global_position = tile_map.map_to_local(current_tile)
 	StageVariables.moves -= 1 #Calls to StageVariables global and updates current moves
@@ -109,16 +164,19 @@ func move(direction: Vector2):
 
 func fly(): #Function that activates the floatitem effect
 	is_floating = true
+	Flying.fly = 5
 	print_debug("Is Float")
 func wet(): #Function that activates the floatitem effect
-	has_water = true
+	is_wet = true
 	print_debug("Is Wet")
 func ice(): #Function that activates the floatitem effect
+	is_cold = true
+	ColdSteps.cold_steps = 5
 	print_debug("Is Cold")
 
 func clear(): #Function that removes all item effects
 	is_floating = false;
-	has_water = false;
+	is_wet = false;
 	is_cold = false;
 
 func yeah(): #Allows the player to go over terrain, it works, its just kind of jank
@@ -127,7 +185,8 @@ func yeah(): #Allows the player to go over terrain, it works, its just kind of j
 func gameover():
 	if StageVariables.moves <= 0:
 		print("Loser")
-		get_tree().paused = true
+		is_gameover = true
+		set_process_unhandled_input(false)
 		
 #func unpause():
 #	if Input.is_action_pressed("Restart"):
