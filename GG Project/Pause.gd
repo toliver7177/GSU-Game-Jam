@@ -12,8 +12,8 @@ func _process(_delta):
 func unpause():
 	if Input.is_action_pressed("Restart"):
 		print(get_tree().paused)
-		StageVariables.moves = 10
+		#StageVariables.moves = 10
 		get_tree().paused = false
-		print("Restart")
+		get_tree().reload_current_scene()
 		
 

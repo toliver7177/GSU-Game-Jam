@@ -37,7 +37,7 @@ func _ready():
 	has_water = false
 	is_cold = false
 	var _Player_vars = get_node("/root/StageVariables")
-	StageVariables.moves = 10
+	
 	
 	
 	
