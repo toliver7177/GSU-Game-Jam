@@ -1,13 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://2101xugr2axi"]
 
 [ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="1_q8c42"]
+[ext_resource type="Script" path="res://StageLoadVariables.gd" id="1_xekes"]
 [ext_resource type="Texture2D" uid="uid://dhugkulgowtcu" path="res://PixelWoods/Waterfall/waterfalls.png" id="2_4abrq"]
 [ext_resource type="Script" path="res://Player.gd" id="2_36h70"]
 [ext_resource type="Texture2D" uid="uid://c4fab7j2ewuvp" path="res://PixelWoods/Seasons/spring/terrain tiles.png" id="2_bxtvg"]
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_rige4"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_olk5l"]
 [ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_1qua0"]
-[ext_resource type="Script" path="res://Button.gd" id="6_0op3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwydq"]
 texture = ExtResource("1_q8c42")
@@ -576,6 +576,7 @@ region = Rect2(80, 144, 16, 16)
 size = Vector2(16, 16)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_xekes")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kbr4w")
@@ -601,6 +602,11 @@ texture = SubResource("AtlasTexture_r2igf")
 
 [node name="Camera2D" type="Camera2D" parent="Player/Sprite2D"]
 position = Vector2(0, 2.13333)
+
+[node name="Label" type="Label" parent="Player/Sprite2D/Camera2D"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Move to Start"
 
 [node name="MoveCast" type="RayCast2D" parent="Player"]
 target_position = Vector2(0, 16)
@@ -643,10 +649,6 @@ z_index = 2
 position = Vector2(96, 128)
 collision_layer = 2
 collision_mask = 2
-
-[node name="Node2D" type="Node2D" parent="."]
-process_mode = 2
-script = ExtResource("6_0op3c")
 
 [node name="Iceitem" type="Area2D" parent="." groups=["iceitem"]]
 position = Vector2(88, 136)
