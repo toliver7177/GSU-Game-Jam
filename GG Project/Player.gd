@@ -133,13 +133,13 @@ func move(direction: Vector2):
 		is_wet = false	
 		print_debug("Ow")
 	
-	ray_cast_2d.target_position = direction * 16
+	ray_cast_2d.target_position = direction * 40
 	ray_cast_2d.force_raycast_update()
 	
 	if ray_cast_2d.is_colliding():
 		return
 	
-	ray_cast_2d2.target_position = direction * 16
+	ray_cast_2d2.target_position = direction * 40
 	ray_cast_2d2.force_raycast_update()
 	if ray_cast_2d2.is_colliding(): #Check current item/terrain player is looking at
 		var collider = ray_cast_2d2.get_collider()

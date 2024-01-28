@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dea6m6qj7t7yf"]
+[gd_scene load_steps=8 format=3 uid="uid://dea6m6qj7t7yf"]
 
 [ext_resource type="TileSet" uid="uid://b8cgmiutxbcp" path="res://helltile_set.tres" id="1_nfem5"]
-[ext_resource type="Texture2D" uid="uid://b7n0gtnl4nuwx" path="res://Kid Assets/CryingKid3.png" id="2_txd6o"]
+[ext_resource type="PackedScene" path="res://child_type_c.tscn" id="3_c2qt2"]
+[ext_resource type="PackedScene" path="res://clown_woman.tscn" id="3_sxnis"]
+[ext_resource type="Texture2D" uid="uid://3haqiarjeks3" path="res://Menu Assets/HUD.png" id="4_r0c6u"]
+[ext_resource type="FontFile" uid="uid://dk181dkmf3uki" path="res://Menu Assets/Namecat.ttf" id="5_hlapg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2dtg6"]
+font = ExtResource("5_hlapg")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2r8f"]
+font = ExtResource("5_hlapg")
+font_size = 40
+font_color = Color(0.894118, 0.0980392, 0.317647, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,17 +30,66 @@ layer_1/tile_data = PackedInt32Array(-65545, 131082, 0, 65533, 196618, 0, 393213
 layer_2/name = "baseMap"
 layer_2/tile_data = PackedInt32Array(327683, 131074, 1, 393219, 131074, 1, 458754, 131074, 1, 458755, 2, 1, 458753, 2, 1, 458752, 131074, 0, 524285, 2, 1, -196606, 131074, 1, -196605, 131074, 0, 65539, 131074, 1, 262147, 131074, 0, 196611, 131074, 1, -9, 131074, 1, 65527, 2, 1, 131063, 131074, 1, 196599, 131074, 0, 393207, 131074, 1, 524279, 131074, 1, 524289, 131074, 0, 524288, 131074, 1, 589823, 131074, 0, 589822, 131074, 0, 589821, 2, 1, 589820, 131074, 1, 589818, 131074, 1, 589817, 131074, 0, 589816, 131074, 0, 589815, 131074, 1, -196615, 131075, 0, -196614, 131074, 1, -196610, 2, 1, -262143, 131074, 1, -262142, 131074, 0, -262141, 131074, 1, -262140, 131074, 1, -196604, 131074, 0, -131068, 131074, 1, -65532, 131074, 1, 4, 131074, 1, 65540, 131074, 1, 131076, 131074, 0, 196612, 131074, 1, 589825, 131074, 1, 589824, 2, 1, 655359, 131074, 0, 655358, 2, 1, 655357, 131074, 0, 655356, 131074, 0, 655355, 2, 1, 655354, 131074, 1, 655353, 2, 1, 655352, 131074, 0, 655351, 2, 1, 655350, 2, 1, 589814, 2, 1, -65546, 2, 1, -10, 131074, 1, 65526, 131074, 1, 131062, 131074, 0, 196598, 131074, 1, 262134, 131074, 1, 327670, 131074, 0, 393206, 2, 1, 458742, 2, 1, 524278, 131074, 0, -262154, 131074, 1, -262153, 2, 1, -262152, 131074, 0, -262151, 131074, 0, -262150, 131074, 1, -262149, 131074, 0, -262148, 131074, 0, -262147, 131074, 0, -262146, 131074, 1, -262145, 131074, 0, -327680, 131074, 0, -327679, 131074, 1, -327678, 131074, 0, -327677, 2, 1, -327676, 131074, 0, -131075, 131075, 0, -65539, 131075, 0, -3, 131075, 0, 65533, 131075, 0, 65537, 131075, 0, 262145, 131075, 0, 327681, 131075, 0, 327680, 131075, 0, 393215, 131075, 0, 393213, 131075, 0, 262141, 131075, 0, 262138, 131075, 0, 327674, 131075, 0, 393210, 131075, 0, 131066, 131075, 0, 65530, 131075, 0, 65529, 131075, 0, 65528, 131075, 0, -7, 131075, 0, -196618, 131074, 1, -131083, 131074, 1, -131082, 2, 1, -196619, 2, 1, -262155, 131074, 0, -65547, 131074, 0, 131061, 131074, 0, 262133, 131074, 0, 327669, 131074, 0, 524277, 131074, 0, 458741, 131074, 1, 393205, 2, 1, 196597, 2, 1, 65525, 2, 1, -11, 131074, 1, -65545, 131075, 0, -131071, 131073, 0, -131072, 131073, 0, -65536, 131073, 0, 65538, 131074, 1, 131073, 131074, 1, 196605, 131074, 1, 196604, 131074, 1, 393212, 131074, 1, 393211, 131074, 1, 458747, 131074, 1, 458745, 131074, 1, 393208, 131074, 1, 262137, 131074, 1, 196601, 131074, 1, 393209, 131074, 1, 458746, 131074, 1, 524282, 131074, 1, 524283, 131074, 1, 458748, 131074, 1, 458750, 131074, 1, 327678, 131074, 1, 327676, 131074, 1, 327679, 131074, 1, 65532, 131074, 1, -5, 131074, 1, -131080, 131074, 0, -131079, 131074, 1, -196612, 131074, 1, -131073, 131074, 1, -1, 131074, 1, -131074, 131074, 1, -2, 131074, 1, -131070, 131074, 1, -131069, 131074, 1, 0, 131074, 1, -196617, 131074, 1, 393218, 131074, 1, 393216, 131074, 1, 393217, 131074, 0, 458751, 131074, 0, 131069, 131074, 0, 65534, 131074, 1, 65531, 131074, 0, -8, 131074, 0, -131081, 131074, 0, -196616, 131074, 0, -131078, 131074, 0, -196613, 131074, 0, -131076, 131074, 0, -196611, 2, 1, -65538, 2, 1, -196607, 131074, 1, -65537, 131074, 1, -65535, 131074, 1, 1, 131074, 0, -65533, 131074, 0, 65536, 131074, 0, 65535, 131074, 0, -4, 2, 1, -6, 131074, 0, 131065, 131074, 1, 131067, 2, 1, 131068, 131074, 1, 196603, 131074, 0, 196602, 2, 1, 131070, 131074, 1, 262142, 131074, 0, 327677, 2, 1, 393214, 131074, 1, 524287, 131074, 0, 196608, 131074, 1, 262146, 131074, 1, 131074, 131074, 0, 131075, 2, 1, 196609, 2, 1, 327682, 2, 1, 262144, 2, 1, 196610, 2, 1, 589819, 2, 1, -196608, 2, 1, -65540, 131074, 1, -65543, 131074, 1)
 
-[node name="CryingKid3" type="Sprite2D" parent="."]
-position = Vector2(61, 182)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_txd6o")
+[node name="Child Type C" parent="." instance=ExtResource("3_c2qt2")]
+position = Vector2(-347, -220)
 
-[node name="CryingKid4" type="Sprite2D" parent="."]
-position = Vector2(-220, 224)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_txd6o")
+[node name="Child Type C2" parent="." instance=ExtResource("3_c2qt2")]
+position = Vector2(-308, 144)
 
-[node name="CryingKid5" type="Sprite2D" parent="."]
-position = Vector2(-259, -140)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_txd6o")
+[node name="Child Type C3" parent="." instance=ExtResource("3_c2qt2")]
+position = Vector2(-27, 102)
+
+[node name="ClownWoman" parent="." instance=ExtResource("3_sxnis")]
+unique_name_in_owner = true
+position = Vector2(60, -63)
+
+[node name="Ms_Clown" parent="ClownWoman" index="1"]
+script = null
+
+[node name="Sprite2D2" type="Sprite2D" parent="ClownWoman"]
+
+[node name="MainCam" type="Camera2D" parent="."]
+z_index = 5
+position = Vector2(61, -81)
+scale = Vector2(0.9375, 0.9375)
+zoom = Vector2(2.3, 2.7)
+
+[node name="UIImg" type="TextureRect" parent="MainCam"]
+z_index = 5
+offset_left = -267.0
+offset_top = -128.0
+offset_right = 267.0
+offset_bottom = 128.0
+texture = ExtResource("4_r0c6u")
+expand_mode = 1
+
+[node name="MovCount" type="Label" parent="MainCam/UIImg"]
+z_index = 5
+layout_mode = 0
+offset_left = 22.7333
+offset_top = 165.333
+offset_right = 64.7333
+offset_bottom = 235.333
+rotation = -0.0843516
+pivot_offset = Vector2(20.2667, 34.1333)
+theme_override_fonts/font = ExtResource("5_hlapg")
+label_settings = SubResource("LabelSettings_2dtg6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovCount2" type="Label" parent="MainCam/UIImg"]
+z_index = 5
+layout_mode = 0
+offset_left = 22.7333
+offset_top = 165.333
+offset_right = 64.7333
+offset_bottom = 235.333
+rotation = -0.0843516
+pivot_offset = Vector2(20.2667, 34.1333)
+theme_override_fonts/font = ExtResource("5_hlapg")
+text = "99"
+label_settings = SubResource("LabelSettings_y2r8f")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="ClownWoman"]

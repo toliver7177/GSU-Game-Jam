@@ -18,15 +18,25 @@ texture_region_size = Vector2i(40, 40)
 texture = ExtResource("1_qo3h3")
 texture_region_size = Vector2i(40, 40)
 2:0/0 = 0
+2:0/0/custom_data_2 = true
 1:0/0 = 0
+1:0/0/custom_data_2 = true
 0:0/0 = 0
+0:0/0/custom_data_2 = true
 0:1/0 = 0
+0:1/0/custom_data_2 = true
 1:1/0 = 0
+1:1/0/custom_data_2 = true
 2:1/0 = 0
+2:1/0/custom_data_2 = true
 2:2/0 = 0
+2:2/0/custom_data_2 = true
 1:2/0 = 0
+1:2/0/custom_data_2 = true
 0:2/0 = 0
+0:2/0/custom_data_2 = true
 0:3/0 = 0
+0:3/0/custom_data_2 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ur0p"]
 texture = ExtResource("3_t0b0u")
@@ -34,6 +44,7 @@ texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
+2:0/0/custom_data_0 = true
 3:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3hpw"]
@@ -52,9 +63,16 @@ texture_region_size = Vector2i(40, 40)
 texture = ExtResource("5_ke5a8")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/custom_data_2 = true
 
 [resource]
 tile_size = Vector2i(40, 40)
+custom_data_layer_0/name = "spike"
+custom_data_layer_0/type = 1
+custom_data_layer_1/name = "hole"
+custom_data_layer_1/type = 1
+custom_data_layer_2/name = "walkable"
+custom_data_layer_2/type = 1
 sources/1 = SubResource("TileSetAtlasSource_m4htr")
 sources/3 = SubResource("TileSetAtlasSource_n3hpw")
 sources/0 = SubResource("TileSetAtlasSource_pa3dd")

@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl2le133nuibm"]
+[gd_scene load_steps=9 format=3 uid="uid://bl2le133nuibm"]
 
 [ext_resource type="TileSet" uid="uid://b8cgmiutxbcp" path="res://helltile_set.tres" id="1_lmltg"]
-[ext_resource type="Texture2D" uid="uid://b7n0gtnl4nuwx" path="res://Kid Assets/CryingKid3.png" id="2_eq6dp"]
+[ext_resource type="PackedScene" path="res://clown_woman.tscn" id="2_8xdeg"]
+[ext_resource type="PackedScene" path="res://child_type_c.tscn" id="3_uoo3g"]
+[ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="3_wid1u"]
+[ext_resource type="Texture2D" uid="uid://3haqiarjeks3" path="res://Menu Assets/HUD.png" id="5_t4ein"]
+[ext_resource type="FontFile" uid="uid://dk181dkmf3uki" path="res://Menu Assets/Namecat.ttf" id="6_0177k"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_ei3h2"]
+font = ExtResource("6_0177k")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_1h21o"]
+font = ExtResource("6_0177k")
+font_size = 40
+font_color = Color(0.894118, 0.0980392, 0.317647, 1)
+
+[node name="Node2D3" type="Node2D"]
 
 [node name="TileMap60STEP" type="TileMap" parent="."]
 scale = Vector2(1.00161, 1.00936)
@@ -19,17 +32,181 @@ layer_1/tile_data = PackedInt32Array(-131072, 9, 0, -196607, 196614, 0, -131071,
 layer_2/name = "baseMap"
 layer_2/tile_data = PackedInt32Array(-131072, 131073, 0, -65535, 131073, 0, -1, 2, 1, 0, 131074, 0, 65536, 131074, 0, 262142, 2, 1, 196608, 131074, 0, 262145, 2, 1, 327681, 131073, 0, 327680, 2, 1, 393215, 131073, 0, 196603, 131074, 1, 131065, 131074, 0, 196601, 131075, 1, 262137, 65539, 1, 327675, 131075, 3, 393211, 3, 0, 458751, 1, 2, 393216, 1, 2, 393217, 1, 2, 327677, 2, 1, 458747, 1, 2, 458746, 1, 2, 393209, 65539, 0, 65535, 3, 1, -131071, 65537, 0, -65537, 1, 0, 327674, 131074, 0, 393213, 131074, 0, 393214, 131075, 3, 458748, 3, 3, 393212, 65539, 3, 458749, 131074, 0, 65534, 65539, 2, 131069, 2, 1, 131070, 2, 1, 327682, 65539, 3, 327683, 131074, 1, 393219, 131074, 1, 458754, 131074, 1, 458755, 2, 1, 458753, 2, 1, 458752, 131074, 0, 524287, 131074, 1, 524286, 131074, 1, 524285, 2, 1, 524284, 131074, 1, 524283, 2, 1, 524282, 131074, 0, 524281, 131074, 1, 458745, 3, 2, 458744, 65539, 2, 393208, 131074, 1, 327672, 131075, 3, 262136, 131075, 3, -65543, 131074, 1, -131078, 131074, 0, -131077, 131074, 1, -131076, 131074, 0, -131075, 2, 1, -65538, 3, 4, -131073, 3, 4, -196608, 131075, 1, -196607, 131075, 2, -196606, 131074, 1, -65534, 2, 1, -196605, 131074, 0, -131069, 131074, 1, -65533, 131074, 1, 65539, 131074, 1, 131075, 131074, 0, 262147, 131074, 0, 196611, 131074, 1, -131080, 3, 2, -131081, 65539, 2, -65545, 131074, 1, 131063, 131074, 1, 196599, 131074, 0, 262135, 131074, 1, 327671, 131074, 0, 393207, 131074, 1, 458743, 131074, 0, 524280, 2, 1, 524279, 131074, 1, 524291, 131074, 1, 524290, 131074, 1, 524289, 131074, 0, 524288, 131074, 1, 589823, 131074, 0, 589822, 131074, 0, 589821, 2, 1, 589820, 131074, 1, 589819, 131074, 0, 589818, 131074, 1, 589817, 131074, 0, 589816, 131074, 0, 589815, 131074, 1, -196617, 131075, 3, -196616, 131073, 0, -196615, 65539, 3, -196614, 131074, 1, -196613, 2, 1, -196612, 131074, 0, -196611, 131074, 1, -196610, 2, 1, -196609, 131074, 1, -262144, 131074, 1, -262143, 131074, 1, -262142, 131074, 0, -262141, 131074, 1, 262139, 131074, 1, 262138, 3, 2, -65536, 131074, 1, 65537, 65539, 3, 131071, 131075, 3, 131073, 131074, 1, 196607, 3, 0, 2, 3, 3, -65540, 2, 1, -65541, 131074, 1, -65542, 131074, 0, 131068, 65539, 3, -7, 3, 4, 393218, 3, 3, 327678, 131074, 1, 458750, 65539, 2, 327676, 65539, 1, 393210, 2, 1, 131074, 131075, 2, 196606, 3, 4, 262141, 131074, 1, 131072, 131075, 0, 262143, 131075, 0, 196609, 131075, 0, 262140, 65539, 0, 65532, 131075, 2, 65531, 65539, 0, 196602, 3, 0, 131066, 3, 1, 65530, 131074, 1, 131067, 131074, 1, 65529, 131075, 3, -6, 131075, 1, -5, 131075, 2, -3, 131074, 0, 65533, 2, 1, -4, 131074, 0, 327679, 2, 1, 262144, 131074, 1, -262140, 131074, 1, -196604, 131074, 0, -131068, 131074, 1, -65532, 131074, 1, 4, 131074, 1, 65540, 131074, 1, 131076, 131074, 0, 196612, 131074, 1, 262148, 131074, 1, 327684, 131074, 0, 393220, 131074, 1, 458756, 131074, 1, 524292, 131074, 0, 589828, 131074, 1, 589827, 131074, 1, 589826, 131074, 0, 589825, 131074, 1, 589824, 2, 1, 655359, 131074, 0, 655358, 2, 1, 655357, 131074, 0, 655356, 131074, 0, 655355, 2, 1, 655354, 131074, 1, 655353, 2, 1, 655352, 131074, 0, 655351, 2, 1, 655350, 2, 1, 589814, 2, 1, -196618, 2, 1, -131082, 2, 1, -65546, 2, 1, -10, 131074, 1, 65526, 131074, 1, 131062, 131074, 0, 196598, 131074, 1, 262134, 131074, 1, 327670, 131074, 0, 393206, 2, 1, 458742, 2, 1, 524278, 131074, 0, -262154, 131074, 1, -262153, 3, 4, -262152, 131075, 1, -262151, 131073, 2, -262150, 131074, 1, -262149, 131074, 0, -262148, 131074, 0, -262147, 131074, 0, -262146, 131074, 1, -262145, 131074, 0, -327680, 131074, 0, -327679, 131074, 1, -327678, 131074, 0, -327677, 2, 1, -327676, 131074, 0, 196600, 3, 4, -131079, 3, 3, -327690, 131074, 1, -327689, 2, 1, -327687, 2, 1, -327685, 2, 1, -327686, 131074, 0, -327688, 131074, 0, -327684, 131074, 0, -327683, 131074, 1, -327681, 131074, 1, -327682, 2, 1, -393214, 2, 1, -393212, 2, 1, -393216, 131074, 0, -393215, 2, 1, -393213, 2, 1)
 
-[node name="CryingKid3" type="Sprite2D" parent="."]
-position = Vector2(101, 263)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_eq6dp")
+[node name="ClownWoman" parent="." instance=ExtResource("2_8xdeg")]
+unique_name_in_owner = true
+position = Vector2(20, -81)
 
-[node name="CryingKid4" type="Sprite2D" parent="."]
-position = Vector2(-258, 20)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_eq6dp")
+[node name="Ms_Clown" parent="ClownWoman" index="1"]
+script = null
 
-[node name="CryingKid5" type="Sprite2D" parent="."]
-position = Vector2(-300.715, 263.66)
-scale = Vector2(0.015, 0.015)
-texture = ExtResource("2_eq6dp")
+[node name="MoveCast" parent="ClownWoman" index="3"]
+target_position = Vector2(0, 40)
+
+[node name="ObjCast" parent="ClownWoman" index="4"]
+target_position = Vector2(0, 40)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ClownWoman"]
+
+[node name="Child Type C" parent="." instance=ExtResource("3_uoo3g")]
+position = Vector2(-347, -58)
+
+[node name="Child Type C2" parent="." instance=ExtResource("3_uoo3g")]
+position = Vector2(13, 184)
+
+[node name="Child Type C3" parent="." instance=ExtResource("3_uoo3g")]
+position = Vector2(-389, 184)
+
+[node name="MainCam" type="Camera2D" parent="."]
+z_index = 5
+position = Vector2(16, -38)
+scale = Vector2(0.9375, 0.9375)
+zoom = Vector2(2.3, 2.7)
+
+[node name="UIImg" type="TextureRect" parent="MainCam"]
+z_index = 5
+offset_left = -267.0
+offset_top = -128.0
+offset_right = 267.0
+offset_bottom = 128.0
+texture = ExtResource("5_t4ein")
+expand_mode = 1
+
+[node name="MovCount" type="Label" parent="MainCam/UIImg"]
+z_index = 5
+layout_mode = 0
+offset_left = 22.7333
+offset_top = 165.333
+offset_right = 64.7333
+offset_bottom = 235.333
+rotation = -0.0843516
+pivot_offset = Vector2(20.2667, 34.1333)
+theme_override_fonts/font = ExtResource("6_0177k")
+label_settings = SubResource("LabelSettings_ei3h2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovCount2" type="Label" parent="MainCam/UIImg"]
+z_index = 5
+layout_mode = 0
+offset_left = 22.7333
+offset_top = 165.333
+offset_right = 64.7333
+offset_bottom = 235.333
+rotation = -0.0843516
+pivot_offset = Vector2(20.2667, 34.1333)
+theme_override_fonts/font = ExtResource("6_0177k")
+text = "99"
+label_settings = SubResource("LabelSettings_1h21o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hole" parent="." groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-140, 101)
+scale = Vector2(2.515, 2.515)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole7" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(95.4274, 32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole2" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(15.9046, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole3" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(79.5229, -32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole4" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(111.332, -32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole5" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(95.4274, -15.9046)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole6" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(95.4274, 15.9046)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole8" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-47.7137, 32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole9" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-63.6183, -15.9046)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole10" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-63.6183, -32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole11" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-79.9205, -32.2068)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole12" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-79.9205, -48.1113)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole13" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-63.6183, -48.1113)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole14" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(-63.6183, -64.4135)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole15" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(15.9046, -64.4135)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole18" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(95.4274, -64.0159)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole16" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(31.8091, -80.3181)
+collision_layer = 2
+collision_mask = 2
+
+[node name="hole17" parent="hole" groups=["hole"] instance=ExtResource("3_wid1u")]
+z_index = 1
+position = Vector2(31.8091, -48.1113)
+collision_layer = 2
+collision_mask = 2
+
+[editable path="ClownWoman"]

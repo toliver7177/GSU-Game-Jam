@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://2yo1w2fxx6y"]
 
-[ext_resource type="TileSet" uid="uid://b8cgmiutxbcp" path="res://HellTiles/helltile_set.tres" id="1_2hj5o"]
+[ext_resource type="TileSet" uid="uid://b8cgmiutxbcp" path="res://helltile_set.tres" id="1_2hj5o"]
 
 [node name="Node2D" type="Node2D"]
 

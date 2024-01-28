@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=8 format=3 uid="uid://b8cgmiutxbcp"]
 
-[ext_resource type="Texture2D" path="res://HellTiles/HELLspriteSheet.png" id="1_apba2"]
-[ext_resource type="Texture2D" path="res://HellTiles/spritesheethell.png" id="2_0q1in"]
+[ext_resource type="Texture2D" uid="uid://b445ikbjajy4r" path="res://HellTiles/HELLspriteSheet.png" id="1_apba2"]
+[ext_resource type="Texture2D" uid="uid://b6yli2uh8xpf3" path="res://HellTiles/spritesheethell.png" id="2_0q1in"]
 [ext_resource type="Texture2D" uid="uid://dm87fwwxd63qh" path="res://ObstaclesAssets/stalagmite.png" id="3_3mwxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdbla"]
