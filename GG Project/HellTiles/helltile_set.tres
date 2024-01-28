@@ -1,10 +1,11 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b8cgmiutxbcp"]
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://b8cgmiutxbcp"]
 
-[ext_resource type="Texture2D" uid="uid://b445ikbjajy4r" path="res://HellTiles/HELLspriteSheet.png" id="1_rew64"]
-[ext_resource type="Texture2D" uid="uid://b6yli2uh8xpf3" path="res://HellTiles/spritesheethell.png" id="2_e7yce"]
+[ext_resource type="Texture2D" path="res://HellTiles/HELLspriteSheet.png" id="1_apba2"]
+[ext_resource type="Texture2D" path="res://HellTiles/spritesheethell.png" id="2_0q1in"]
+[ext_resource type="Texture2D" uid="uid://dm87fwwxd63qh" path="res://ObstaclesAssets/stalagmite.png" id="3_3mwxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdbla"]
-texture = ExtResource("1_rew64")
+texture = ExtResource("1_apba2")
 texture_region_size = Vector2i(40, 40)
 0:2/0 = 0
 1:2/0 = 0
@@ -17,7 +18,7 @@ texture_region_size = Vector2i(40, 40)
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj002"]
-texture = ExtResource("2_e7yce")
+texture = ExtResource("2_0q1in")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
 1:0/0 = 0
@@ -30,7 +31,7 @@ texture_region_size = Vector2i(40, 40)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7iphe"]
-texture = ExtResource("1_rew64")
+texture = ExtResource("1_apba2")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
 1:0/0 = 0
@@ -46,8 +47,15 @@ texture_region_size = Vector2i(40, 40)
 2:3/0 = 0
 0:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lluk"]
+texture = ExtResource("3_3mwxd")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+
 [resource]
 tile_size = Vector2i(40, 40)
 sources/1 = SubResource("TileSetAtlasSource_xdbla")
 sources/2 = SubResource("TileSetAtlasSource_vj002")
 sources/3 = SubResource("TileSetAtlasSource_7iphe")
+sources/4 = SubResource("TileSetAtlasSource_8lluk")
