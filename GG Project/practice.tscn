@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://du3h83ppjalmm"]
+
+[ext_resource type="Texture2D" uid="uid://b4balxrv50lr4" path="res://icon.svg" id="1_ktpwp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktfsd"]
+bg_color = Color(0.00784314, 0.443137, 0.854902, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfbyc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y86hr"]
+bg_color = Color(0.890196, 0, 0.101961, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_yorrv"]
+font_size = 38
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 11
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player Info Box" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 21.0
+offset_right = 421.0
+offset_bottom = 173.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ktfsd")
+
+[node name="Avatar Frame" type="Panel" parent="Player Info Box"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -62.0
+offset_right = 155.0
+offset_bottom = 61.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfbyc")
+
+[node name="TextureRect" type="TextureRect" parent="Player Info Box/Avatar Frame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -62.0
+offset_right = 65.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ktpwp")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -315.0
+offset_top = 21.0
+offset_right = -47.0
+offset_bottom = 173.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y86hr")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.0
+offset_right = 71.0
+offset_bottom = 53.0
+grow_horizontal = 2
+text = "SHEESH"
+label_settings = SubResource("LabelSettings_yorrv")
+horizontal_alignment = 1

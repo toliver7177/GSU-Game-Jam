@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b1jx06oh7w3ao"]
+
+[ext_resource type="Texture2D" uid="uid://cmmxydhchqipu" path="res://ParkTiles/groundspritesheet.png" id="1_aktv5"]
+[ext_resource type="Texture2D" uid="uid://dgi4i5caen3fe" path="res://ParkTiles/WaterSpriteSheet.png" id="2_5pr0c"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_53i4a"]
+texture = ExtResource("1_aktv5")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5e20"]
+texture = ExtResource("2_5pr0c")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+
+[resource]
+tile_size = Vector2i(40, 40)
+sources/1 = SubResource("TileSetAtlasSource_53i4a")
+sources/2 = SubResource("TileSetAtlasSource_h5e20")

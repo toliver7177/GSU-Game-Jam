@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://6ukkmgv2y10s"]
+
+[ext_resource type="Script" path="res://items/wateritem/wateritem.gd" id="1_xlfne"]
+[ext_resource type="Texture2D" uid="uid://dwwredne3iomt" path="res://tilemap_packed.png" id="2_jo0bt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucpkm"]
+atlas = ExtResource("2_jo0bt")
+region = Rect2(128, 144, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kp8lu"]
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_xlfne")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, 0.25)
+scale = Vector2(0.5, 0.4875)
+texture = SubResource("AtlasTexture_ucpkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kp8lu")
+
+[connection signal="area_entered" from="." to="." method="_on_wateritem_area_entered"]

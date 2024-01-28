@@ -1,0 +1,291 @@
+[gd_scene load_steps=10 format=3 uid="uid://b03win2avqme6"]
+
+[ext_resource type="Script" path="res://Main Menu.gd" id="1_o2xt0"]
+[ext_resource type="Texture2D" uid="uid://f2t4llyunh5p" path="res://Menu Assets/DAAAN.png" id="1_rmmcm"]
+[ext_resource type="FontFile" uid="uid://mn642hb1nsw5" path="res://Menu Assets/Sancreek-Regular.ttf" id="2_l7lh7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvffy"]
+font = ExtResource("2_l7lh7")
+font_size = 115
+font_color = Color(0.909804, 0.101961, 0.317647, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 14
+shadow_color = Color(0, 0, 0, 0.419608)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qvjn6"]
+font = ExtResource("2_l7lh7")
+font_size = 115
+font_color = Color(0.290196, 0.431373, 0.929412, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 14
+shadow_color = Color(0, 0, 0, 0.419608)
+
+[sub_resource type="LabelSettings" id="LabelSettings_42lay"]
+font = ExtResource("2_l7lh7")
+font_size = 44
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnw5r"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.290196, 0.431373, 0.929412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1llh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.290196, 0.431373, 0.929412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suy0g"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o2xt0")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_rmmcm")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -336.0
+offset_top = 96.0
+offset_right = 384.0
+offset_bottom = 281.0
+grow_horizontal = 2
+
+[node name="Clown" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -92.5
+offset_right = 387.0
+offset_bottom = 99.5
+grow_vertical = 2
+text = "CLOWN "
+label_settings = SubResource("LabelSettings_vvffy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Game" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = -96.0
+offset_bottom = 96.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "GAME"
+label_settings = SubResource("LabelSettings_qvjn6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -344.0
+offset_right = 256.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Start Button" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 136.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_l7lh7")
+theme_override_font_sizes/font_size = 44
+text = "Start Game"
+flat = true
+
+[node name="Start Game" type="Label" parent="Control2/Start Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -31.0
+offset_right = 113.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+label_settings = SubResource("LabelSettings_42lay")
+
+[node name="Options Button" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -68.0
+offset_right = 94.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_l7lh7")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_rnw5r")
+text = "Options"
+flat = true
+
+[node name="Options" type="Label" parent="Control2/Options Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -31.0
+offset_right = 83.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_42lay")
+
+[node name="How To But" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -152.0
+offset_right = 152.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_l7lh7")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_n1llh")
+text = "How to Play"
+flat = true
+
+[node name="How To Play" type="Label" parent="Control2/How To But"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -36.0
+offset_right = 119.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "How to Play"
+label_settings = SubResource("LabelSettings_42lay")
+
+[node name="Quit Button2" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -72.0
+offset_right = 176.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_l7lh7")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/hover = SubResource("StyleBoxFlat_suy0g")
+text = "Quit to Desktop"
+flat = true
+
+[node name="Quit to Desktop" type="Label" parent="Control2/Quit Button2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -31.0
+offset_right = 113.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit to Desktop"
+label_settings = SubResource("LabelSettings_42lay")
+
+[connection signal="pressed" from="Control2/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control2/How To But" to="." method="_on_how_to_but_pressed"]
+[connection signal="pressed" from="Control2/Quit Button2" to="." method="_on_quit_button_2_pressed"]
