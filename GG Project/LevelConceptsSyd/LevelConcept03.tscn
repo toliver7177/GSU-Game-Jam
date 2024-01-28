@@ -5,7 +5,7 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap70STEP" type="TileMap" parent="."]
 scale = Vector2(1.00161, 1.00936)
 tile_set = ExtResource("1_nfem5")
 format = 2
