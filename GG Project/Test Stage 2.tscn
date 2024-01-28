@@ -713,3 +713,17 @@ text = "99"
 label_settings = SubResource("LabelSettings_tq25f")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MovCount3" type="Label" parent="Node2D/MainCam/UIImg"]
+layout_mode = 0
+offset_left = 465.4
+offset_top = 166.4
+offset_right = 511.4
+offset_bottom = 236.4
+rotation = 0.088592
+pivot_offset = Vector2(20.2667, 34.1333)
+theme_override_fonts/font = ExtResource("11_qabwx")
+text = "99"
+label_settings = SubResource("LabelSettings_tq25f")
+horizontal_alignment = 1
+vertical_alignment = 1

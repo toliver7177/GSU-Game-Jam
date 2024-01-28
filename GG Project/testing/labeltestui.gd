@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var man = $MainCam/UIImg/MovCount
 @onready var man2 = $MainCam/UIImg/MovCount2
+@onready var man3 = $MainCam/UIImg/MovCount3
 #var red = Color(1.0,0.0,0.0,1.0)
 # Called when the node enters the scene tree for the first time.
 func _ready():
