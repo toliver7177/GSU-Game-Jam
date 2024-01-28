@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://b8cgmiutxbcp"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://b8cgmiutxbcp"]
 
 [ext_resource type="Texture2D" uid="uid://dm87fwwxd63qh" path="res://ObstaclesAssets/stalagmite.png" id="1_kuold"]
 [ext_resource type="Texture2D" uid="uid://b445ikbjajy4r" path="res://HellTiles/HELLspriteSheet.png" id="1_rew64"]
@@ -11,19 +11,6 @@
 texture = ExtResource("1_kuold")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
-1:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdbla"]
-texture = ExtResource("1_rew64")
-texture_region_size = Vector2i(40, 40)
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-2:1/0 = 0
-1:1/0 = 0
-0:1/0 = 0
-0:0/0 = 0
-2:0/0 = 0
 1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkspo"]
@@ -57,10 +44,13 @@ texture_region_size = Vector2i(40, 40)
 texture = ExtResource("1_rew64")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/custom_data_0 = true
 0:0/0/custom_data_1 = true
 1:0/0 = 0
+1:0/0/custom_data_0 = true
 1:0/0/custom_data_1 = true
 2:0/0 = 0
+2:0/0/custom_data_0 = true
 2:0/0/custom_data_1 = true
 0:1/0 = 0
 0:1/0/custom_data_1 = true
@@ -95,6 +85,7 @@ texture_region_size = Vector2i(40, 40)
 texture = ExtResource("6_1jbqo")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
+0:0/0/custom_data_1 = true
 
 [resource]
 tile_size = Vector2i(40, 40)
@@ -106,7 +97,10 @@ custom_data_layer_2/name = "fire"
 custom_data_layer_2/type = 1
 custom_data_layer_3/name = "cool"
 custom_data_layer_3/type = 1
-sources/1 = SubResource("TileSetAtlasSource_xdbla")
+custom_data_layer_4/name = "water"
+custom_data_layer_4/type = 1
+custom_data_layer_5/name = "hole"
+custom_data_layer_5/type = 1
 sources/2 = SubResource("TileSetAtlasSource_vj002")
 sources/3 = SubResource("TileSetAtlasSource_7iphe")
 sources/0 = SubResource("TileSetAtlasSource_mukll")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ebte4dvm1gk6"]
+
+[ext_resource type="TileSet" uid="uid://b8cgmiutxbcp" path="res://helltile_set.tres" id="1_hitgv"]
+[ext_resource type="PackedScene" uid="uid://bfg8g0puete4w" path="res://clown_woman.tscn" id="2_d0hv7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_hitgv")
+format = 2
+layer_0/tile_data = PackedInt32Array(262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 196610, 3, 0, 196609, 3, 0, 196608, 3, 0, 327679, 3, 0, 393215, 3, 0, 458751, 3, 0, 262143, 3, 0)
+
+[node name="ClownWoman" parent="TileMap" instance=ExtResource("2_d0hv7")]
+unique_name_in_owner = true
+position = Vector2(57, 180)
+
+[node name="Ms_Clown" parent="TileMap/ClownWoman" index="1"]
+script = null
+
+[node name="Sprite2D2" type="Sprite2D" parent="TileMap/ClownWoman"]
+
+[editable path="TileMap/ClownWoman"]

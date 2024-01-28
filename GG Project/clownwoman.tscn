@@ -748,7 +748,7 @@ bone_angle = 0.0
 
 [node name="Torso" type="Bone2D" parent="Marker2D/Skeleton2D/Hip"]
 position = Vector2(-36, -213)
-rotation = -0.00752345
+rotation = -0.00752346
 rest = Transform2D(1, 0, 0, 1, -36, -213)
 auto_calculate_length_and_angle = false
 length = 117.378

@@ -1,7 +1,7 @@
 extends Sprite2D
 class_name Player
 
-@onready var tile_map = $"../TileMap"
+@onready var tile_map = $".."
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $MoveCast
 @onready var ray_cast_2d2 = $ObjCast
@@ -67,7 +67,7 @@ func _ready():
 	var hover = get_node("/root/Flying")
 	var cooling = get_node("/root/Soak")
 	#move_lbl.text = str(StageVariables.moves)
-	
+	StageVariables.moves = 10
 func move(direction: Vector2):
 	
 	var current_tile: Vector2i = tile_map.local_to_map(global_position)
@@ -78,9 +78,12 @@ func move(direction: Vector2):
 	)
 	
 	var tile_data: TileData = tile_map.get_cell_tile_data(0, target_tile)
-	
+	if tile_data == null:
+		return
+	print(ray_cast_2d.get_collider_rid())
 	#move_lbl.text = str(StageVariables.moves - 1)
 	if tile_data.get_custom_data("walkable") == false:
+		print("can't walk")
 		return
 	# Check if the player is cold and can walk on water tiles
 	if tile_data.get_custom_data("water") == true && is_cold == false:
@@ -135,7 +138,7 @@ func move(direction: Vector2):
 	
 	ray_cast_2d.target_position = direction * 40
 	ray_cast_2d.force_raycast_update()
-	
+	ray_cast_2d.get_collider()
 	if ray_cast_2d.is_colliding():
 		return
 	
