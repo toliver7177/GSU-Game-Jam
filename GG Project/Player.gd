@@ -5,7 +5,8 @@ class_name Player
 @onready var sprite_2d = $Sprite2D
 @onready var ray_cast_2d = $MoveCast
 @onready var ray_cast_2d2 = $ObjCast
-@onready var move_lbl = $Sprite2D/Camera2D/Label
+@onready var _animation_player = $Ms_Clown/Marker2D/AnimationPlayer
+@onready var _clownsprite = $Ms_Clown/ClownGirl
 var is_moving = false
 var is_floating = false
 var is_wet = false
@@ -17,20 +18,35 @@ var collision
 func _process(_delta):
 	if is_moving || is_gameover:
 		return
-	
+	_animation_player.speed_scale = 2
 	if Input.is_action_pressed("up"):
+		_animation_player.play("LeftMove")
 		move(Vector2.UP)
+		
 	elif Input.is_action_pressed("down"):
+		_animation_player.play("LeftMove")
+		_animation_player.advance(0)
 		move(Vector2.DOWN)
+		
+		
 	elif Input.is_action_pressed("left"):
+		_animation_player.play("LeftMove")
+		_animation_player.advance(0)
 		move(Vector2.LEFT)
+		
+		
 	elif Input.is_action_pressed("right"):
+		_animation_player.play("LeftMove")
 		move(Vector2.RIGHT)
+		_animation_player.advance(0)
+		
 	
+		
+		
 	gameover()
 	#print("tick")
 	#unpause()
-	move_lbl.text = str(StageVariables.moves)
+	#move_lbl.text = str(StageVariables.moves)
 	
 func _ready():
 	
@@ -45,7 +61,7 @@ func _ready():
 	var freeze = get_node("/root/ColdSteps")
 	var hover = get_node("/root/Flying")
 	var cooling = get_node("/root/Soak")
-	move_lbl.text = str(StageVariables.moves)
+	#move_lbl.text = str(StageVariables.moves)
 	
 	
 func move(direction: Vector2):
@@ -59,7 +75,7 @@ func move(direction: Vector2):
 	
 	var tile_data: TileData = tile_map.get_cell_tile_data(0, target_tile)
 	
-	move_lbl.text = str(StageVariables.moves - 1)
+	#move_lbl.text = str(StageVariables.moves - 1)
 	if tile_data.get_custom_data("walkable") == false:
 		return
 	# Check if the player is cold and can walk on water tiles

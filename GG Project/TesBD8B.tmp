@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://6ukkmgv2y10s" path="res://items/wateritem/wateritem.tscn" id="3_rige4"]
 [ext_resource type="PackedScene" uid="uid://d0jnw1k70lnqw" path="res://items/terrain/hole.tscn" id="4_olk5l"]
 [ext_resource type="PackedScene" uid="uid://dxrwdgsg4fsci" path="res://items/balloon/balloon.tscn" id="5_1qua0"]
-[ext_resource type="PackedScene" uid="uid://c74yd3wyyr5mx" path="res://clownwoman.tscn" id="6_0d6lv"]
+[ext_resource type="PackedScene" uid="uid://c74yd3wyyr5mx" path="res://node_2d.tscn" id="6_0d6lv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lwydq"]
 texture = ExtResource("1_q8c42")
@@ -597,19 +597,17 @@ scale = Vector2(1.6988, 1.54129)
 position = Vector2(-4.76837e-07, 9.53674e-07)
 shape = SubResource("RectangleShape2D_5ri7y")
 
-[node name="Ms_Clown" parent="Player" instance=ExtResource("6_0d6lv")]
-position = Vector2(-3, 5)
-scale = Vector2(0.028125, 0.028125)
-
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-visible = false
 scale = Vector2(0.9375, 0.9375)
 texture = SubResource("AtlasTexture_r2igf")
+
+[node name="Ms_Clown" parent="Player/Sprite2D" instance=ExtResource("6_0d6lv")]
+position = Vector2(-59.7333, -93.8667)
+scale = Vector2(1.06667, 1.06667)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 2)
 scale = Vector2(0.9375, 0.9375)
-zoom = Vector2(5, 5)
 
 [node name="Label" type="Label" parent="Player/Camera2D"]
 visible = false

@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://c74yd3wyyr5mx"]
+[gd_scene load_steps=9 format=3 uid="uid://c74yd3wyyr5mx"]
 
 [ext_resource type="Texture2D" uid="uid://c5mduul4r8bqr" path="res://DisectedClown.png" id="1_6yw0c"]
 [ext_resource type="Texture2D" uid="uid://cyh0u57uswsn1" path="res://Clown Girl.png" id="2_7fwnr"]
+
+[sub_resource type="GDScript" id="GDScript_n14ny"]
+script/source = "extends Node2D
+
+#@onready var _animation_player = $Marker2D/AnimationPlayer
+
+# Called when the node enters the scene tree for the first time.
+"
 
 [sub_resource type="Animation" id="Animation_cw4vg"]
 resource_name = "Idle"
@@ -54,6 +62,154 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(0.267943, 2.46229, 0.353553, 2.2974, 0.233258),
 "update": 0,
 "values": [0.0, 0.192091, -0.218993, 0.192091, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dxvbn"]
+resource_name = "LeftMove"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Marker2D/Skeleton2D/Hip:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.241484, 8.87654, 0.170755),
+"update": 0,
+"values": [Vector2(92, -668), Vector2(95, -576), Vector2(92, -668)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Marker2D/Skeleton2D/Hip:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.183011, 3.73213, 0.277392),
+"update": 0,
+"values": [0.0, 0.126651, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.225313, 5.65685, 0.203063),
+"update": 0,
+"values": [0.0, -0.151744, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1/RLeg2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.258816, 3.86374, 0.267943),
+"update": 0,
+"values": [0.0, 0.334588, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1/RLeg2/RLeg3:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.217638, 3.605, 0.241484),
+"update": 0,
+"values": [0.0, -0.332598, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Marker2D/Skeleton2D/Hip/LLeg1:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.225313, 2.73208, 0.210224),
+"update": 0,
+"values": [0.0, 0.177506, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Marker2D/Skeleton2D/Hip/LLeg1/LLeg2/LLeg3:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.217638, 4, 0.189465),
+"update": 0,
+"values": [0.0, -0.341518, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmL1:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.225313, 4.14106, 0.287175),
+"update": 0,
+"values": [0.0, 0.0764023, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmL1/ArmL2:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.297302, 3.4822, 0.15932),
+"update": 0,
+"values": [-0.218993, -0.00447462, -0.218993]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmR:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.233258, 3.86375, 0.233258),
+"update": 0,
+"values": [0.0, -0.614932, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmR/ArmR2:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.217638, 3.73213, 0.267943),
+"update": 0,
+"values": [0.0, -0.219683, 0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/Neck/Head:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(0.217638, 3.605, 0.258816),
+"update": 0,
+"values": [0.0, -0.183154, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_h1vt6"]
@@ -375,154 +531,6 @@ tracks/11/keys = {
 "values": [0.0, -0.183154, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_dxvbn"]
-resource_name = "LeftMove"
-length = 1.20001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Marker2D/Skeleton2D/Hip:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.241484, 8.87654, 0.170755),
-"update": 0,
-"values": [Vector2(92, -668), Vector2(95, -576), Vector2(92, -668)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Marker2D/Skeleton2D/Hip:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.183011, 3.73213, 0.277392),
-"update": 0,
-"values": [0.0, 0.126651, 0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.225313, 5.65685, 0.203063),
-"update": 0,
-"values": [0.0, -0.151744, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1/RLeg2:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.258816, 3.86374, 0.267943),
-"update": 0,
-"values": [0.0, 0.334588, 0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Marker2D/Skeleton2D/Hip/RLeg1/RLeg2/RLeg3:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.217638, 3.605, 0.241484),
-"update": 0,
-"values": [0.0, -0.332598, 0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Marker2D/Skeleton2D/Hip/LLeg1:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.225313, 2.73208, 0.210224),
-"update": 0,
-"values": [0.0, 0.177506, 0.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Marker2D/Skeleton2D/Hip/LLeg1/LLeg2/LLeg3:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.217638, 4, 0.189465),
-"update": 0,
-"values": [0.0, -0.341518, 0.0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmL1:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.225313, 4.14106, 0.287175),
-"update": 0,
-"values": [0.0, 0.0764023, 0.0]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmL1/ArmL2:rotation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.297302, 3.4822, 0.15932),
-"update": 0,
-"values": [-0.218993, -0.00447462, -0.218993]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmR:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.233258, 3.86375, 0.233258),
-"update": 0,
-"values": [0.0, -0.614932, 0.0]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/ArmR/ArmR2:rotation")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.217638, 3.73213, 0.267943),
-"update": 0,
-"values": [0.0, -0.219683, 0.0]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("../Marker2D/Skeleton2D/Hip/Torso/Neck/Head:rotation")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.6, 1),
-"transitions": PackedFloat32Array(0.217638, 3.605, 0.258816),
-"update": 0,
-"values": [0.0, -0.183154, 0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_37ho1"]
 _data = {
 "Idle": SubResource("Animation_cw4vg"),
@@ -532,6 +540,7 @@ _data = {
 }
 
 [node name="Ms_Clown" type="Node2D"]
+script = SubResource("GDScript_n14ny")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 z_index = 5
@@ -732,7 +741,6 @@ scale = Vector2(0.0159571, -0.01)
 
 [node name="Hip" type="Bone2D" parent="Marker2D/Skeleton2D"]
 position = Vector2(92, -668)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 92, -668)
 auto_calculate_length_and_angle = false
 length = 108.162
@@ -740,7 +748,7 @@ bone_angle = 0.0
 
 [node name="Torso" type="Bone2D" parent="Marker2D/Skeleton2D/Hip"]
 position = Vector2(-36, -213)
-rotation = -0.00752343
+rotation = -0.00752345
 rest = Transform2D(1, 0, 0, 1, -36, -213)
 auto_calculate_length_and_angle = false
 length = 117.378
@@ -755,6 +763,7 @@ bone_angle = 77.838
 
 [node name="ArmR2" type="Bone2D" parent="Marker2D/Skeleton2D/Hip/Torso/ArmR"]
 position = Vector2(36, 136)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 36, 136)
 auto_calculate_length_and_angle = false
 length = 135.811
@@ -776,6 +785,7 @@ bone_angle = 77.838
 
 [node name="ArmL2" type="Bone2D" parent="Marker2D/Skeleton2D/Hip/Torso/ArmL1"]
 position = Vector2(-68, 151)
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -68, 151)
 auto_calculate_length_and_angle = false
 length = 135.811
@@ -803,7 +813,6 @@ bone_angle = 278.918
 
 [node name="RLeg1" type="Bone2D" parent="Marker2D/Skeleton2D/Hip"]
 position = Vector2(77, 64)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 77, 64)
 auto_calculate_length_and_angle = false
 length = 191.109
@@ -839,7 +848,6 @@ bone_angle = 90.215
 
 [node name="LLeg3" type="Bone2D" parent="Marker2D/Skeleton2D/Hip/LLeg1/LLeg2"]
 position = Vector2(-60, 243)
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -60, 243)
 auto_calculate_length_and_angle = false
 length = 117.379
@@ -850,6 +858,7 @@ root_node = NodePath("../../ClownGirl")
 libraries = {
 "": SubResource("AnimationLibrary_37ho1")
 }
+autoplay = "Idle"
 
 [node name="ClownGirl" type="Sprite2D" parent="."]
 visible = false
