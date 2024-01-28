@@ -7,6 +7,7 @@ class_name Player
 @onready var ray_cast_2d2 = $ObjCast
 @onready var _animation_player = $Ms_Clown/Marker2D/AnimationPlayer
 @onready var _clownsprite = $Ms_Clown/ClownGirl
+@onready var _her = $Ms_Clown
 
 var is_moving = false
 var is_floating = false
@@ -41,6 +42,7 @@ func _process(_delta):
 		move(Vector2.RIGHT)
 		_animation_player.advance(0)
 		
+		
 	if _animation_player.current_animation != "Idle" && _animation_player.current_animation != "LeftMove":
 		
 		_animation_player.play("Idle")
@@ -65,7 +67,6 @@ func _ready():
 	var hover = get_node("/root/Flying")
 	var cooling = get_node("/root/Soak")
 	#move_lbl.text = str(StageVariables.moves)
-	
 	
 func move(direction: Vector2):
 	

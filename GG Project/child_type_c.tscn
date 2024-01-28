@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cohbssrwwy8lx"]
+
+[ext_resource type="Script" path="res://childCScript.gd" id="1_m0spo"]
+[ext_resource type="Texture2D" uid="uid://b7n0gtnl4nuwx" path="res://Kid Assets/CryingKid3.png" id="2_bb2wv"]
+[ext_resource type="Texture2D" uid="uid://cxpu1c8x70xqh" path="res://Kid Assets/HappyKid3.png" id="3_unmia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cugku"]
+size = Vector2(15, 16)
+
+[node name="Child Type C" type="Node2D"]
+script = ExtResource("1_m0spo")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(88, 90)
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_cugku")
+
+[node name="Crying Sprite" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, -15)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("2_bb2wv")
+
+[node name="Happy Sprite" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -20)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("3_unmia")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
